@@ -220,4 +220,10 @@ pip-log.txt
 
 Library/
 [Tt]emp/
+obj/
+/[Tt]emp
+/obj
+/[Ll]ibrary
+*.csproj
+*.unityproj
 *.sln

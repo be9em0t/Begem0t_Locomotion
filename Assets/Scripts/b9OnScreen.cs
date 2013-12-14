@@ -6,12 +6,12 @@ using System.Collections;
 
 public class b9OnScreen : MonoBehaviour {
 
-    public Color guiText;
-    public Color guiTextTitle;
+    public Color guiTextColor;
+    public Color guiTitleColor;
 
 	void OnGUI () {
-        guiText= new Color(0.94F, 0.6F, 0.2F, .92F);
-        guiTextTitle = new Color(1F, 1F, 1F, .85F);
+        guiTextColor= new Color(0.94F, 0.6F, 0.2F, .92F);
+        guiTitleColor = new Color(1F, 1F, 1F, .85F);
 
         // Make a background box
 		GUIStyle infoStyle = new GUIStyle();	
@@ -19,13 +19,13 @@ public class b9OnScreen : MonoBehaviour {
 		infoStyle.font = GUI.skin.font;
 
         GUIStyle smallStyle = new GUIStyle();
-        smallStyle.normal.textColor = guiTextTitle;
+        smallStyle.normal.textColor = guiTitleColor;
         smallStyle.fontSize = 13;
         //smallStyle.fontStyle = FontStyle.Bold;
         smallStyle.font = GUI.skin.font;
 
         GUIStyle mainStyle = new GUIStyle();
-        mainStyle.normal.textColor = guiText;
+        mainStyle.normal.textColor = guiTextColor;
         //mainStyle.fontStyle = FontStyle.Bold;
         mainStyle.fontSize = 13;
         mainStyle.font = GUI.skin.font;

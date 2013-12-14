@@ -549,7 +549,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 435478682}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 78e60b3120d049344b772159bc7dfd88, type: 3}
+  m_Script: {fileID: 11500000, guid: 974058f1d2736304994d21b8b5c7a840, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   DampTime: 3
@@ -1914,8 +1914,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 04bf41831219b244a895c872818aee9f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  guiText: {r: .939999998, g: .419999987, b: .300000012, a: .5}
-  guiTextTitle: {r: 0, g: 0, b: 0, a: 0}
+  guiTextColor: {r: 0, g: 0, b: 0, a: 0}
+  guiTitleColor: {r: 0, g: 0, b: 0, a: 0}
 --- !u!1 &1443698735
 GameObject:
   m_ObjectHideFlags: 0

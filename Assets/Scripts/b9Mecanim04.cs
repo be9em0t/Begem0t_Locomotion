@@ -30,25 +30,25 @@ public class b9Mecanim04 : MonoBehaviour {
     static int standTurnState = Animator.StringToHash("TURN_ON_SPOT.TURN_ON_SPOT");
 
     //inputs new version
-    string currentButton;
-    string currentAxis;
-    float axisInput;
-    float axXhoriz = 0f;        //main stick direction (XY)
-    float axYvert = 0f;
-    float ax3horiz = 0f;        //second stick direction
-    float ax4vert = 0f;
-    float ax5leftright = 0f;    //Dpad direction
-    float ax6updown = 0f;
+    //string currentButton;
+    //string currentAxis;
+    //float axisInput;
+    float axLhoriz = 0f;        //main stick direction (XY)
+    float axLvert = 0f;
+    float axRhoriz = 0f;        //second stick direction
+    float axRvert = 0f;
+    //float ax5leftright = 0f;    //Dpad direction
+    //float ax6updown = 0f;
 
-    bool JumpY = false;         //xboxY/up
-    bool CrouchA = false;       //xboxA/down
-    bool leftX = false;         //xboxX/left
+    //bool JumpY = false;         //xboxY/up
+    //bool CrouchA = false;       //xboxA/down
+    float StrafeX = 0f;         //xboxX/left
     bool rightB = false;        //xboxB/right
 
-    bool fire1 = false;         //leftCtrl/mouseL/XboxFireR
-    bool fire2 = false;         //leftAlt/mouseR/XboxFireL
-    bool fire3 = false;         //leftShift/xboxBumpR
-    bool fire4 = false;         //xboxBumpL
+    //bool fire1 = false;         //leftCtrl/mouseL/XboxFireR
+    //bool fire2 = false;         //leftAlt/mouseR/XboxFireL
+    //bool fire3 = false;         //leftShift/xboxBumpR
+    //bool fire4 = false;         //xboxBumpL
 
 	void Start () 
 	{
@@ -72,25 +72,38 @@ public class b9Mecanim04 : MonoBehaviour {
         anim.SetFloat("animSpeed", animSpeed);
         anim.SetFloat("animRotation", animRot);
 
-        //if (animSpeed > 0.05f)
-        //    print("Forward speed " + animSpeed);
-        //else if (animSpeed < -0.05f)
-        //    print("Backward speed " + animSpeed);
-        //else
-        //    print("Stop");
     }
 
     void JoyInput()
     {
         //Get Inputs
-        axXhoriz = Input.GetAxis("Horizontal");
-        axYvert = Input.GetAxis("Vertical");
-        absSpeed = Mathf.Abs(axYvert);
-        absRot = Mathf.Abs(axXhoriz);
+        axLhoriz = Input.GetAxis("LHorizontal");
+        axLvert = Input.GetAxis("LVertical");
+        absSpeed = Mathf.Abs(axLvert);
+        absRot = Mathf.Abs(axLhoriz);
+
+        axRhoriz = Input.GetAxis("RHorizontal");
+        axRvert = Input.GetAxis("RVertical");
+        //absSpeed = Mathf.Abs(axRvert);
+        //absRot = Mathf.Abs(axRhoriz);
+
+
+        if (Input.GetButton("joystick button 0"))
+            StrafeX = Mathf.Lerp(StrafeX, 1f, DampTime * Time.deltaTime);
+        else if (StrafeX > 0.01f && !Input.GetButton("joystick button 0"))
+            StrafeX = Mathf.Lerp(StrafeX, 0f, DampTime * Time.deltaTime);
+
+            anim.SetFloat("strafeX", StrafeX);
+
+
+        
 
         //Control Animator
-        anim.SetFloat("SpeedY", axYvert);							// set our animator's float parameter 'Speed' equal to the vertical input axis				
-        anim.SetFloat("DirectionX", axXhoriz); 						// set our animator's float parameter 'Direction' equal to the horizontal input axis	
+        anim.SetFloat("SpeedLY", axLvert);							// set our animator's float parameter 'Speed' equal to the vertical input axis				
+        anim.SetFloat("DirectionLX", axLhoriz); 						// set our animator's float parameter 'Direction' equal to the horizontal input axis	
+        anim.SetFloat("RVert", axRvert);
+        anim.SetFloat("RHoriz", axRhoriz);
+
         anim.SetFloat("absSpeed", absSpeed);						// Speed absolute value
         anim.SetFloat("absRotation", absRot);						// Rotation absolute value
 
@@ -100,7 +113,7 @@ public class b9Mecanim04 : MonoBehaviour {
         //anim.SetBool("Fire4Stop", true);
         //anim.SetBool("xboxYjump", true);
         //anim.SetBool("xboxAcrouch", true);
-        //anim.SetBool("xboxX", true);
+        //anim.SetBool("Xstrafe", true);
         //anim.SetBool("xboxB", true);
 
 

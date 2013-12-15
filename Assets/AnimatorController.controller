@@ -8,32 +8,14 @@ AnimatorController:
   m_Name: AnimatorController
   serializedVersion: 2
   m_AnimatorParameters:
-  - m_Name: SpeedY
+  - m_Name: SpeedLY
     m_Type: 1
     m_DefaultFloat: 0
     m_DefaultInt: 0
     m_DefaultBool: 0
     m_Controller: {fileID: 9100000}
-  - m_Name: DirectionX
+  - m_Name: DirectionLX
     m_Type: 1
-    m_DefaultFloat: 0
-    m_DefaultInt: 0
-    m_DefaultBool: 0
-    m_Controller: {fileID: 9100000}
-  - m_Name: Jump
-    m_Type: 4
-    m_DefaultFloat: 0
-    m_DefaultInt: 0
-    m_DefaultBool: 0
-    m_Controller: {fileID: 9100000}
-  - m_Name: Shift
-    m_Type: 1
-    m_DefaultFloat: 0
-    m_DefaultInt: 0
-    m_DefaultBool: 0
-    m_Controller: {fileID: 9100000}
-  - m_Name: Alt
-    m_Type: 4
     m_DefaultFloat: 0
     m_DefaultInt: 0
     m_DefaultBool: 0
@@ -51,6 +33,30 @@ AnimatorController:
     m_DefaultBool: 0
     m_Controller: {fileID: 9100000}
   - m_Name: absSpeed
+    m_Type: 1
+    m_DefaultFloat: 0
+    m_DefaultInt: 0
+    m_DefaultBool: 0
+    m_Controller: {fileID: 9100000}
+  - m_Name: absRotation
+    m_Type: 1
+    m_DefaultFloat: 0
+    m_DefaultInt: 0
+    m_DefaultBool: 0
+    m_Controller: {fileID: 9100000}
+  - m_Name: strafeX
+    m_Type: 1
+    m_DefaultFloat: 0
+    m_DefaultInt: 0
+    m_DefaultBool: 0
+    m_Controller: {fileID: 9100000}
+  - m_Name: RVert
+    m_Type: 1
+    m_DefaultFloat: 0
+    m_DefaultInt: 0
+    m_DefaultBool: 0
+    m_Controller: {fileID: 9100000}
+  - m_Name: RHoriz
     m_Type: 1
     m_DefaultFloat: 0
     m_DefaultInt: 0
@@ -306,7 +312,7 @@ BlendTree:
     m_CycleOffset: 0
     m_IsAnim: 1
     m_Mirror: 0
-  m_BlendParameter: DirectionX
+  m_BlendParameter: DirectionLX
   m_BlendParameterY: Speed
   m_MinThreshold: 0
   m_MaxThreshold: 1
@@ -516,7 +522,7 @@ BlendTree:
     m_CycleOffset: .5
     m_IsAnim: 1
     m_Mirror: 1
-  m_BlendParameter: DirectionX
+  m_BlendParameter: DirectionLX
   m_BlendParameterY: Blend
   m_MinThreshold: -1
   m_MaxThreshold: 1
@@ -611,7 +617,7 @@ BlendTree:
     m_CycleOffset: 0
     m_IsAnim: 1
     m_Mirror: 0
-  m_BlendParameter: SpeedY
+  m_BlendParameter: SpeedLY
   m_BlendParameterY: Speed
   m_MinThreshold: .200000003
   m_MaxThreshold: 1
@@ -679,7 +685,7 @@ BlendTree:
     m_CycleOffset: .5
     m_IsAnim: 1
     m_Mirror: 1
-  m_BlendParameter: DirectionX
+  m_BlendParameter: DirectionLX
   m_BlendParameterY: Speed
   m_MinThreshold: -1
   m_MaxThreshold: 1
@@ -713,7 +719,7 @@ BlendTree:
     m_CycleOffset: .5
     m_IsAnim: 1
     m_Mirror: 1
-  m_BlendParameter: DirectionX
+  m_BlendParameter: DirectionLX
   m_BlendParameterY: Blend
   m_MinThreshold: -1
   m_MaxThreshold: 1
@@ -747,7 +753,7 @@ BlendTree:
     m_CycleOffset: 0
     m_IsAnim: 1
     m_Mirror: 0
-  m_BlendParameter: DirectionX
+  m_BlendParameter: DirectionLX
   m_BlendParameterY: Blend
   m_MinThreshold: -1
   m_MaxThreshold: 1
@@ -903,7 +909,7 @@ BlendTree:
     m_CycleOffset: 0
     m_IsAnim: 1
     m_Mirror: 0
-  m_BlendParameter: SpeedY
+  m_BlendParameter: SpeedLY
   m_BlendParameterY: Speed
   m_MinThreshold: -1
   m_MaxThreshold: 0
@@ -1032,7 +1038,7 @@ BlendTree:
     m_CycleOffset: 0
     m_IsAnim: 1
     m_Mirror: 0
-  m_BlendParameter: DirectionX
+  m_BlendParameter: DirectionLX
   m_BlendParameterY: Blend
   m_MinThreshold: -1
   m_MaxThreshold: 1
@@ -1059,7 +1065,7 @@ BlendTree:
     m_CycleOffset: .5
     m_IsAnim: 1
     m_Mirror: 1
-  m_BlendParameter: DirectionX
+  m_BlendParameter: DirectionLX
   m_BlendParameterY: Speed
   m_MinThreshold: -1
   m_MaxThreshold: 0
@@ -1155,7 +1161,7 @@ Transition:
   m_TransitionOffset: 0
   m_Conditions:
   - m_ConditionMode: 5
-    m_ConditionEvent: SpeedY
+    m_ConditionEvent: SpeedLY
     m_EventTreshold: 0
     m_ExitTime: .548108637
   m_Atomic: 1
@@ -1173,7 +1179,7 @@ Transition:
   m_TransitionOffset: 0
   m_Conditions:
   - m_ConditionMode: 5
-    m_ConditionEvent: SpeedY
+    m_ConditionEvent: SpeedLY
     m_EventTreshold: 0
     m_ExitTime: .550000012
   m_Atomic: 1
@@ -1191,7 +1197,7 @@ Transition:
   m_TransitionOffset: 0
   m_Conditions:
   - m_ConditionMode: 4
-    m_ConditionEvent: DirectionX
+    m_ConditionEvent: DirectionLX
     m_EventTreshold: -.100000001
     m_ExitTime: .722223282
   m_Atomic: 1
@@ -1209,7 +1215,7 @@ Transition:
   m_TransitionOffset: .0355033949
   m_Conditions:
   - m_ConditionMode: 3
-    m_ConditionEvent: SpeedY
+    m_ConditionEvent: SpeedLY
     m_EventTreshold: .200000003
     m_ExitTime: .963592231
   m_Atomic: 0
@@ -1231,11 +1237,11 @@ Transition:
     m_EventTreshold: .100000001
     m_ExitTime: .711539149
   - m_ConditionMode: 4
-    m_ConditionEvent: DirectionX
+    m_ConditionEvent: DirectionLX
     m_EventTreshold: .5
     m_ExitTime: .711539149
   - m_ConditionMode: 5
-    m_ConditionEvent: DirectionX
+    m_ConditionEvent: DirectionLX
     m_EventTreshold: .5
     m_ExitTime: .100000001
   m_Atomic: 1
@@ -1275,7 +1281,7 @@ Transition:
   m_TransitionOffset: 0
   m_Conditions:
   - m_ConditionMode: 5
-    m_ConditionEvent: SpeedY
+    m_ConditionEvent: SpeedLY
     m_EventTreshold: 0
     m_ExitTime: .899999976
   m_Atomic: 1
@@ -1319,7 +1325,7 @@ Transition:
     m_EventTreshold: .100000001
     m_ExitTime: .642855585
   - m_ConditionMode: 4
-    m_ConditionEvent: DirectionX
+    m_ConditionEvent: DirectionLX
     m_EventTreshold: -.5
     m_ExitTime: .642855585
   m_Atomic: 1
@@ -1341,7 +1347,7 @@ Transition:
     m_EventTreshold: .100000001
     m_ExitTime: .964285731
   - m_ConditionMode: 3
-    m_ConditionEvent: DirectionX
+    m_ConditionEvent: DirectionLX
     m_EventTreshold: .100000001
     m_ExitTime: .964285731
   m_Atomic: 1
@@ -1373,7 +1379,7 @@ Transition:
   m_TransitionOffset: 0
   m_Conditions:
   - m_ConditionMode: 4
-    m_ConditionEvent: SpeedY
+    m_ConditionEvent: SpeedLY
     m_EventTreshold: -.200000003
     m_ExitTime: .964285731
   m_Atomic: 1
@@ -1413,11 +1419,11 @@ Transition:
     m_EventTreshold: .100000001
     m_ExitTime: .758064866
   - m_ConditionMode: 3
-    m_ConditionEvent: DirectionX
+    m_ConditionEvent: DirectionLX
     m_EventTreshold: -.5
     m_ExitTime: .758064866
   - m_ConditionMode: 5
-    m_ConditionEvent: DirectionX
+    m_ConditionEvent: DirectionLX
     m_EventTreshold: -.5
     m_ExitTime: .100000001
   m_Atomic: 1
@@ -1435,11 +1441,11 @@ Transition:
   m_TransitionOffset: .0980113745
   m_Conditions:
   - m_ConditionMode: 5
-    m_ConditionEvent: SpeedY
+    m_ConditionEvent: SpeedLY
     m_EventTreshold: 0
     m_ExitTime: .0952272415
   - m_ConditionMode: 4
-    m_ConditionEvent: SpeedY
+    m_ConditionEvent: SpeedLY
     m_EventTreshold: .200000003
     m_ExitTime: .00999999978
   m_Atomic: 1
@@ -1457,11 +1463,11 @@ Transition:
   m_TransitionOffset: 0
   m_Conditions:
   - m_ConditionMode: 3
-    m_ConditionEvent: DirectionX
+    m_ConditionEvent: RHoriz
     m_EventTreshold: -.100000001
     m_ExitTime: .722223282
   - m_ConditionMode: 4
-    m_ConditionEvent: DirectionX
+    m_ConditionEvent: RHoriz
     m_EventTreshold: .100000001
     m_ExitTime: .722223282
   m_Atomic: 1
@@ -1479,7 +1485,7 @@ Transition:
   m_TransitionOffset: 0
   m_Conditions:
   - m_ConditionMode: 5
-    m_ConditionEvent: SpeedY
+    m_ConditionEvent: SpeedLY
     m_EventTreshold: 0
     m_ExitTime: .928571403
   m_Atomic: 1
@@ -1541,11 +1547,11 @@ Transition:
   m_TransitionOffset: 0
   m_Conditions:
   - m_ConditionMode: 4
-    m_ConditionEvent: SpeedY
+    m_ConditionEvent: SpeedLY
     m_EventTreshold: .100000001
     m_ExitTime: .964285731
   - m_ConditionMode: 3
-    m_ConditionEvent: DirectionX
+    m_ConditionEvent: RHoriz
     m_EventTreshold: .100000001
     m_ExitTime: .964285731
   m_Atomic: 1
@@ -1567,7 +1573,7 @@ Transition:
     m_EventTreshold: .100000001
     m_ExitTime: .833333313
   - m_ConditionMode: 3
-    m_ConditionEvent: DirectionX
+    m_ConditionEvent: DirectionLX
     m_EventTreshold: .5
     m_ExitTime: .833333313
   m_Atomic: 1
@@ -1585,11 +1591,11 @@ Transition:
   m_TransitionOffset: 0
   m_Conditions:
   - m_ConditionMode: 3
-    m_ConditionEvent: DirectionX
+    m_ConditionEvent: RHoriz
     m_EventTreshold: -.100000001
     m_ExitTime: .722223282
   - m_ConditionMode: 4
-    m_ConditionEvent: DirectionX
+    m_ConditionEvent: RHoriz
     m_EventTreshold: .100000001
     m_ExitTime: .722223282
   m_Atomic: 1
@@ -1607,7 +1613,7 @@ Transition:
   m_TransitionOffset: .0332071707
   m_Conditions:
   - m_ConditionMode: 5
-    m_ConditionEvent: SpeedY
+    m_ConditionEvent: SpeedLY
     m_EventTreshold: .100000001
     m_ExitTime: .5
   m_Atomic: 1
@@ -1629,11 +1635,11 @@ Transition:
     m_EventTreshold: .100000001
     m_ExitTime: .666666627
   - m_ConditionMode: 4
-    m_ConditionEvent: DirectionX
+    m_ConditionEvent: DirectionLX
     m_EventTreshold: .5
     m_ExitTime: .666666627
   - m_ConditionMode: 5
-    m_ConditionEvent: DirectionX
+    m_ConditionEvent: DirectionLX
     m_EventTreshold: .5
     m_ExitTime: .99000001
   m_Atomic: 1
@@ -1651,11 +1657,11 @@ Transition:
   m_TransitionOffset: 0
   m_Conditions:
   - m_ConditionMode: 4
-    m_ConditionEvent: SpeedY
+    m_ConditionEvent: SpeedLY
     m_EventTreshold: .100000001
     m_ExitTime: .964285731
   - m_ConditionMode: 4
-    m_ConditionEvent: DirectionX
+    m_ConditionEvent: RHoriz
     m_EventTreshold: -.100000001
     m_ExitTime: .964285731
   m_Atomic: 1
@@ -1717,11 +1723,11 @@ Transition:
     m_EventTreshold: .100000001
     m_ExitTime: .666666627
   - m_ConditionMode: 3
-    m_ConditionEvent: DirectionX
+    m_ConditionEvent: DirectionLX
     m_EventTreshold: -.5
     m_ExitTime: .666666627
   - m_ConditionMode: 5
-    m_ConditionEvent: DirectionX
+    m_ConditionEvent: DirectionLX
     m_EventTreshold: -.5
     m_ExitTime: .99000001
   m_Atomic: 1
@@ -1757,7 +1763,7 @@ Transition:
   m_TransitionOffset: 0
   m_Conditions:
   - m_ConditionMode: 3
-    m_ConditionEvent: SpeedY
+    m_ConditionEvent: SpeedLY
     m_EventTreshold: -.100000001
     m_ExitTime: .711724401
   m_Atomic: 1
@@ -1775,7 +1781,7 @@ Transition:
   m_TransitionOffset: 0
   m_Conditions:
   - m_ConditionMode: 3
-    m_ConditionEvent: DirectionX
+    m_ConditionEvent: DirectionLX
     m_EventTreshold: .100000001
     m_ExitTime: .722223282
   m_Atomic: 1
@@ -1811,7 +1817,7 @@ Transition:
     m_EventTreshold: .100000001
     m_ExitTime: .964285731
   - m_ConditionMode: 4
-    m_ConditionEvent: DirectionX
+    m_ConditionEvent: DirectionLX
     m_EventTreshold: -.100000001
     m_ExitTime: .964285731
   m_Atomic: 1
@@ -2320,7 +2326,7 @@ StateMachine:
   - {fileID: 110770147}
   m_ChildStateMachinePosition:
   - {x: 168, y: -96, z: 0}
-  - {x: -84, y: -96, z: 0}
+  - {x: -168, y: -84, z: 0}
   - {x: -60, y: 288, z: 0}
   - {x: 432, y: -96, z: 0}
   - {x: -156, y: 180, z: 0}

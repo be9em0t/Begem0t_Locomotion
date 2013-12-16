@@ -4,7 +4,7 @@ using System;
 
 public class b9CameraControl : MonoBehaviour {
 
-	float smooth = 2f;	            // 0 - infinity, 10 almost instant, default 2 - a public variable to adjust smoothing of camera motion
+    float DampCamera = 2f;	        //Adjust smoothing of camera motion: 0 - infinity, 10 almost instant, default 2
 	float camDist = -2.5f;          //Initial Camera distance
 	float camHeight = .8f;          //Initial Camera height
 	float rotAround = 0f;           //cameraParent rotation around target
@@ -34,8 +34,8 @@ public class b9CameraControl : MonoBehaviour {
 	void Update () {
         //follow Avatar with Camera 
         targetPos= new Vector3(avatarTransf.position.x, avatarTransf.position.y-vertOffset, avatarTransf.position.z);
-        cameraParent.transform.position = Vector3.Lerp(cameraParent.transform.position, targetPos, smooth * Time.deltaTime); 
-        cameraParent.transform.rotation = Quaternion.Slerp(cameraParent.transform.rotation, avatarTransf.rotation * Quaternion.Euler(0f, rotAround, 0f), smooth * Time.deltaTime); 
+        cameraParent.transform.position = Vector3.Lerp(cameraParent.transform.position, targetPos, DampCamera * Time.deltaTime);
+        cameraParent.transform.rotation = Quaternion.Slerp(cameraParent.transform.rotation, avatarTransf.rotation * Quaternion.Euler(0f, rotAround, 0f), DampCamera * Time.deltaTime); 
 
         //zoom Camera in and out
         camera.fieldOfView = cameraZoom;
@@ -59,6 +59,7 @@ public class b9CameraControl : MonoBehaviour {
 		{
             rotAround = rotAround + (100f * Time.deltaTime);
 		}
+        rotAround = rotAround + (Input.GetAxis("5th axis")*2f);
         //Camera up and down
 		if (Input.GetKey(KeyCode.Quote))
 		{
@@ -68,6 +69,7 @@ public class b9CameraControl : MonoBehaviour {
 		{
 			vertOffset=vertOffset+(1 * Time.deltaTime);
 		}
+        vertOffset = vertOffset + (Input.GetAxis("6th axis")/50);
         //Camera Zoom
         if (Input.GetKey(KeyCode.PageUp))
         {
@@ -78,7 +80,7 @@ public class b9CameraControl : MonoBehaviour {
             cameraZoom = cameraZoom + (10 * Time.deltaTime);
         }
         //Reset Camera
-        if (Input.GetKey(KeyCode.Home))
+        if (Input.GetKey(KeyCode.Home) || Input.GetButtonDown("joystick button 8"))
         {
             rotAround = 0f;
             vertOffset = 0f;

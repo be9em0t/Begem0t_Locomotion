@@ -42,17 +42,25 @@ public class b9OnScreen : MonoBehaviour {
 //		GUI.Label(new Rect(10,45, 100,20), "Speed:    "+s);		
 //		GUI.Label(new Rect(10,55, 100,40), "Direction:"+d);
 		
-		GUI.Label(new Rect(10, 10, 200, 120), "KEYBOARD", smallStyle);
+		GUI.Label(new Rect(10, 20, 200, 120), "CAMERA", smallStyle);
         GUI.Label(new Rect(10, 40, 200, 120), "Camera Left/Right : < >", mainStyle);
         GUI.Label(new Rect(10, 60, 200, 120), "Camera Up/Down : \" ?", mainStyle);
         GUI.Label(new Rect(10, 80, 200, 120), "Camera Zoom : PgUp PgDn", mainStyle);
         GUI.Label(new Rect(10, 100, 200, 120), "Reset Camera: Home", mainStyle);
-        GUI.Label(new Rect(10, 120, 200, 120), "         --------", smallStyle);
-        GUI.Label(new Rect(10, 140, 200, 120), "Move avatar : Arrows, WASD", mainStyle);
-        GUI.Label(new Rect(10, 160, 200, 120), "SpeedUp : LeftShift", mainStyle);
-        GUI.Label(new Rect(10, 180, 200, 120), "Strafe/SideStep: Alt", mainStyle);
-        GUI.Label(new Rect(10, 200, 200, 120), "Change Idle : I key", mainStyle);
+
+        GUI.Label(new Rect(10, 140, 200, 120), "KEYBOARD", smallStyle);
+        GUI.Label(new Rect(10, 160, 200, 120), "Move avatar : Arrows", mainStyle);
+        GUI.Label(new Rect(10, 180, 200, 120), "SpeedUp : LeftShift+Arrows", mainStyle);
+        GUI.Label(new Rect(10, 200, 200, 120), "Strafe/SideStep: Alt+Arrows", mainStyle);
         GUI.Label(new Rect(10, 220, 200, 120), "Alert : L key", mainStyle);
+
+        GUI.Label(new Rect(10, 260, 200, 120), "GAMEPAD", smallStyle);
+        GUI.Label(new Rect(10, 280, 200, 120), "Camera : DPad", mainStyle);
+        GUI.Label(new Rect(10, 300, 200, 120), "Camera Reset : Back", mainStyle);
+
+        GUI.Label(new Rect(10, 320, 200, 120), "Move : Left Stick", mainStyle);
+        GUI.Label(new Rect(10, 340, 200, 120), "Strafe/SideStep: Right Stick", mainStyle);
+        GUI.Label(new Rect(10, 360, 200, 120), "Alert : Left Bumper", mainStyle);
 
 
 //		GUI.Label(new Rect(10,130, 160,120), "Z/X: Zoom camera");

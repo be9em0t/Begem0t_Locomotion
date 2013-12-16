@@ -553,7 +553,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   DampTime: 3
-  Altkey: 0
 --- !u!95 &435478685
 Animator:
   serializedVersion: 2

@@ -59,7 +59,7 @@ public class b9CameraControl : MonoBehaviour {
 		{
             rotAround = rotAround + (200f * Time.deltaTime);
 		}
-        rotAround = rotAround + (Input.GetAxis("5th axis")*3f);
+        rotAround = rotAround + (Input.GetAxis("6th axis")*3f);
         //Camera up and down
 		if (Input.GetKey(KeyCode.Quote))
 		{
@@ -69,7 +69,7 @@ public class b9CameraControl : MonoBehaviour {
 		{
 			vertOffset=vertOffset+(1 * Time.deltaTime);
 		}
-        vertOffset = vertOffset + (Input.GetAxis("6th axis")/50);
+        vertOffset = vertOffset + (Input.GetAxis("7th axis")/50);
         //Camera Zoom
         if (Input.GetKey(KeyCode.PageUp))
         {
@@ -80,7 +80,7 @@ public class b9CameraControl : MonoBehaviour {
             cameraZoom = cameraZoom + (10 * Time.deltaTime);
         }
         //Reset Camera
-        if (Input.GetKey(KeyCode.Home) || Input.GetButtonDown("joystick button 8"))
+        if (Input.GetKey(KeyCode.Home) || Input.GetButtonDown("joystick button 6"))
         {
             rotAround = 0f;
             vertOffset = 0f;

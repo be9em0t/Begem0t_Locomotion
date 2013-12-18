@@ -57,14 +57,14 @@ ModelImporter:
     400050: //RootNode
     7400000: Run-2-Walk
     7400002: Run-2-Stand 02 no
-    7400004: Run-2-Stand 03 ok
-    7400006: Stand-2-Run 01 OK
-    7400008: Run-2-Stand 04 ok
-    7400010: Run-2-Stand 05 OK
-    7400012: Run-2-Stand 06 ok
+    7400004: Run-2-Stand 03
+    7400006: Stand-2-Run 01 Ok
+    7400008: Run-2-Stand 04
+    7400010: Run-2-Stand 05 OK Long
+    7400012: Run-2-Stand 06
     7400014: Run-2-Stand 07 no
     7400016: Run-2-Stand 08 no
-    7400018: Stand-2-Run 02 OK
+    7400018: Stand-2-Run 02
     7400020: Stand-2-Run 03 no
     7400022: Stand-2-Run 04 no
     7400024: Walk-2-Stand 01
@@ -73,6 +73,7 @@ ModelImporter:
     7400030: Walk-2-Stand 03 quick
     7400032: Stand-Walk-Run test
     7400034: Stand-2-Walk 02 acceptable
+    7400036: Run-2-Stand 05 OK short
     9500000: //RootNode
   materials:
     importMaterials: 1
@@ -246,7 +247,7 @@ ModelImporter:
       maskType: 0
       maskSource: {instanceID: 0}
     - serializedVersion: 16
-      name: Run-2-Stand 03 ok
+      name: Run-2-Stand 03
       takeName: Vla13-12-10_-010 run-stops, walk-stops
       firstFrame: 1112.09998
       lastFrame: 1148
@@ -324,7 +325,7 @@ ModelImporter:
       maskType: 0
       maskSource: {instanceID: 0}
     - serializedVersion: 16
-      name: Stand-2-Run 01 OK
+      name: Stand-2-Run 01 Ok
       takeName: Vla13-12-10_-010 run-stops, walk-stops
       firstFrame: 1374
       lastFrame: 1406
@@ -402,7 +403,7 @@ ModelImporter:
       maskType: 0
       maskSource: {instanceID: 0}
     - serializedVersion: 16
-      name: Run-2-Stand 04 ok
+      name: Run-2-Stand 04
       takeName: Vla13-12-10_-010 run-stops, walk-stops
       firstFrame: 1425.69995
       lastFrame: 1472
@@ -480,7 +481,7 @@ ModelImporter:
       maskType: 0
       maskSource: {instanceID: 0}
     - serializedVersion: 16
-      name: Run-2-Stand 05 OK
+      name: Run-2-Stand 05 OK Long
       takeName: Vla13-12-10_-010 run-stops, walk-stops
       firstFrame: 1576.40002
       lastFrame: 1636
@@ -558,7 +559,7 @@ ModelImporter:
       maskType: 0
       maskSource: {instanceID: 0}
     - serializedVersion: 16
-      name: Run-2-Stand 06 ok
+      name: Run-2-Stand 06
       takeName: Vla13-12-10_-010 run-stops, walk-stops
       firstFrame: 1969.19995
       lastFrame: 2025.20007
@@ -792,7 +793,7 @@ ModelImporter:
       maskType: 0
       maskSource: {instanceID: 0}
     - serializedVersion: 16
-      name: Stand-2-Run 02 OK
+      name: Stand-2-Run 02
       takeName: Vla13-12-10_-010 run-stops, walk-stops
       firstFrame: 2561.69995
       lastFrame: 2596.30005
@@ -1420,6 +1421,84 @@ ModelImporter:
       takeName: Vla13-12-10_-010 run-stops, walk-stops
       firstFrame: 5121.7002
       lastFrame: 5159
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 1
+      loopBlendPositionY: 1
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 0
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 1
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: ObjectWithLocalPropertyView
+        weight: 0
+      - path: Reference
+        weight: 1
+      - path: Reference/Hips
+        weight: 1
+      - path: Reference/Hips/LeftUpLeg
+        weight: 1
+      - path: Reference/Hips/LeftUpLeg/LeftLeg
+        weight: 1
+      - path: Reference/Hips/LeftUpLeg/LeftLeg/LeftFoot
+        weight: 1
+      - path: Reference/Hips/LeftUpLeg/LeftLeg/LeftFoot/LeftToeBase
+        weight: 1
+      - path: Reference/Hips/RightUpLeg
+        weight: 1
+      - path: Reference/Hips/RightUpLeg/RightLeg
+        weight: 1
+      - path: Reference/Hips/RightUpLeg/RightLeg/RightFoot
+        weight: 1
+      - path: Reference/Hips/RightUpLeg/RightLeg/RightFoot/RightToeBase
+        weight: 1
+      - path: Reference/Hips/Spine
+        weight: 1
+      - path: Reference/Hips/Spine/Spine1
+        weight: 1
+      - path: Reference/Hips/Spine/Spine1/Spine2
+        weight: 1
+      - path: Reference/Hips/Spine/Spine1/Spine2/Spine3
+        weight: 1
+      - path: Reference/Hips/Spine/Spine1/Spine2/Spine3/LeftShoulder
+        weight: 1
+      - path: Reference/Hips/Spine/Spine1/Spine2/Spine3/LeftShoulder/LeftArm
+        weight: 1
+      - path: Reference/Hips/Spine/Spine1/Spine2/Spine3/LeftShoulder/LeftArm/LeftForeArm
+        weight: 1
+      - path: Reference/Hips/Spine/Spine1/Spine2/Spine3/LeftShoulder/LeftArm/LeftForeArm/LeftHand
+        weight: 1
+      - path: Reference/Hips/Spine/Spine1/Spine2/Spine3/Neck
+        weight: 1
+      - path: Reference/Hips/Spine/Spine1/Spine2/Spine3/Neck/Head
+        weight: 1
+      - path: Reference/Hips/Spine/Spine1/Spine2/Spine3/RightShoulder
+        weight: 1
+      - path: Reference/Hips/Spine/Spine1/Spine2/Spine3/RightShoulder/RightArm
+        weight: 1
+      - path: Reference/Hips/Spine/Spine1/Spine2/Spine3/RightShoulder/RightArm/RightForeArm
+        weight: 1
+      - path: Reference/Hips/Spine/Spine1/Spine2/Spine3/RightShoulder/RightArm/RightForeArm/RightHand
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+    - serializedVersion: 16
+      name: Run-2-Stand 05 OK short
+      takeName: Vla13-12-10_-010 run-stops, walk-stops
+      firstFrame: 1587.19995
+      lastFrame: 1630.59998
       wrapMode: 0
       orientationOffsetY: 0
       level: 0

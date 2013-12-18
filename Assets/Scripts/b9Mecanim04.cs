@@ -4,7 +4,8 @@ using System.Collections;
 public class b9Mecanim04 : MonoBehaviour {
 
     public float DampTime = 3f;                     // adjust motion lerping:  0 - infinity, 10 almost instant, default 3
-	private Animator anim;							// a reference to the animator on the character
+    public static float animSpeed = 1f;
+    private Animator anim;							// a reference to the animator on the character
 
     //Actual Animator speed and turn rates
     float animSpeedABS;             //absolute values of Animator
@@ -39,8 +40,9 @@ public class b9Mecanim04 : MonoBehaviour {
 	// Update is called once per frame
 	void Update () 
 	{
-        JoyInput();         //Apply inputs
-        AvatarSpeed();      //Read avatar current condition
+        anim.speed = animSpeed;     // set the speed of our animator to the public variable 'animSpeed'
+        JoyInput();                 //Apply inputs
+        AvatarSpeed();              //Read avatar current condition
 
         //GenericInput();
         //LogicStates();
@@ -66,8 +68,8 @@ public class b9Mecanim04 : MonoBehaviour {
             walk = Mathf.Lerp(walk, -.5f, DampTime * Time.deltaTime);
         else if (!Input.GetKey(KeyCode.UpArrow) || !Input.GetKey(KeyCode.DownArrow))
         {
-            walk = Mathf.Lerp(walk, 0f, DampTime * Time.deltaTime);
-            run = Mathf.Lerp(run, 0f, DampTime * Time.deltaTime);
+            walk = Mathf.Lerp(walk, 0f, (DampTime/2) * Time.deltaTime);
+            run = Mathf.Lerp(run, 0f, (DampTime/2) * Time.deltaTime);
         }
 
         //Run
@@ -78,7 +80,7 @@ public class b9Mecanim04 : MonoBehaviour {
             else if (Input.GetKey(KeyCode.LeftShift) && (Mathf.Sign(walk) == -1))
                 run = Mathf.Lerp(run, -.5f, DampTime * Time.deltaTime);
             else if (!Input.GetKey(KeyCode.LeftShift))
-                run = Mathf.Lerp(run, 0f, DampTime * Time.deltaTime);
+                run = Mathf.Lerp(run, 0f, (DampTime / 2) * Time.deltaTime);
         }
 
         //Alt-Strafe

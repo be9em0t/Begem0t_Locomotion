@@ -53,13 +53,13 @@ public class b9CameraControl : MonoBehaviour {
         //Rotate Camera Around
 		if (Input.GetKey(KeyCode.Period))
 		{
-            rotAround = rotAround - (100f * Time.deltaTime);
+            rotAround = rotAround - (200f * Time.deltaTime);
 		}
 		else if (Input.GetKey(KeyCode.Comma))
 		{
-            rotAround = rotAround + (100f * Time.deltaTime);
+            rotAround = rotAround + (200f * Time.deltaTime);
 		}
-        rotAround = rotAround + (Input.GetAxis("5th axis")*2f);
+        rotAround = rotAround + (Input.GetAxis("5th axis")*3f);
         //Camera up and down
 		if (Input.GetKey(KeyCode.Quote))
 		{

@@ -6,8 +6,15 @@ using System.Collections;
 
 public class b9OnScreen : MonoBehaviour {
 
+    public float hSliderValue = 0.0F;
+
     public Color guiTextColor;
     public Color guiTitleColor;
+
+    void Start() 
+    {
+        hSliderValue = b9Mecanim04.animSpeed; 
+    }
 
 	void OnGUI () {
         guiTextColor= new Color(0.94F, 0.6F, 0.2F, .92F);
@@ -62,6 +69,18 @@ public class b9OnScreen : MonoBehaviour {
         GUI.Label(new Rect(10, 340, 200, 120), "Strafe/SideStep: Right Stick", mainStyle);
         GUI.Label(new Rect(10, 360, 200, 120), "Alert : Left Bumper", mainStyle);
 
+        //GUI.Label(new Rect(10, 360, 200, 120), "Alert : Left Bumper", mainStyle);
+        if (GUI.Button(new Rect(Screen.width - 110, 30, 30, 28), ".5x"))
+            hSliderValue = .5f;
+        if (GUI.Button(new Rect(Screen.width - 75, 30, 30, 28), "1x"))
+            hSliderValue = 1f;
+        if (GUI.Button(new Rect(Screen.width - 40, 30, 30, 28), "2x"))
+            hSliderValue = 2f;
+
+        hSliderValue = GUI.HorizontalSlider(new Rect(Screen.width - 110, 10, 100, 30), hSliderValue, 0.0F, 5.0F);  //anim speed slider
+        hSliderValue = Mathf.Round((hSliderValue * 10f)) / 10f;     //round to DP1
+        b9Mecanim04.animSpeed = hSliderValue;                       
+        GUI.Label(new Rect(Screen.width - 110, 70, 100, 30), "Anim Speed:" + hSliderValue.ToString(), mainStyle);
 
 //		GUI.Label(new Rect(10,130, 160,120), "Z/X: Zoom camera");
 //		GUI.Label(new Rect(10,150, 160,120), "R  : Reset avatar");

@@ -1913,6 +1913,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 04bf41831219b244a895c872818aee9f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  hSliderValue: 0
   guiTextColor: {r: 0, g: 0, b: 0, a: 0}
   guiTitleColor: {r: 0, g: 0, b: 0, a: 0}
 --- !u!1 &1443698735

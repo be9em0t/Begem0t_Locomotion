@@ -5,29 +5,39 @@ using System;
 public class b9Mecanim04 : MonoBehaviour
 {
     public float DampTime = 3f;                     // adjust motion lerping:  0 - infinity, 10 almost instant, default 3
-    public static float animSpeed = 1f;
-    private Animator anim;							// a reference to the animator on the character
-
-    float allAxis = 0f;             //all joystick axis inputs
+    public static float animSpeed = 1f;             // global animation speed
 
     //Actual Animator speed and turn rates
     float animSpeedABS;             //absolute values of Animator
     float animRotABS;
 
-    float strafe = 0f;              //strafing speed
-    float walk = 0f;                 //walk speed
-    float run = 0f;                 //running speed
-    float turn = 0f;                 //turning speed
+    float strafe = 0f;              //keyb strafing speed
+    float walk = 0f;                //keyb walk speed
+    float run = 0f;                 //keyb running speed
+    float turn = 0f;                //keyb turning speed
+    float allAxis = 0f;             //sum of all joystick axis inputs
+
+    bool button0A = false;
+    bool button1B = false;
+    bool button2X = false;
+    bool button3Y = false;
+    bool button4LB = false;
+    bool button5RB = false;
+    bool button6 = false;
+    bool button7 = false;
+    bool button8 = false;
+    bool button9 = false;
 
     //States
-    private AnimatorStateInfo animState;			// a reference to the current state of the animator, used for base layer
+    private Animator anim;
+    private AnimatorStateInfo animState;
     bool canChangeState = true;
 
     static int idleState = Animator.StringToHash("Base Layer.Stand_Idle");
 
     static int idle01 = Animator.StringToHash("STAND_IDLES.Idle01");
     static int idle02 = Animator.StringToHash("STAND_IDLES.Idle02");
-    static int idle03 = Animator.StringToHash("STAND_IDLES.Idle03");     //
+    static int idle03 = Animator.StringToHash("STAND_IDLES.Idle03");
     static int idle04 = Animator.StringToHash("STAND_IDLES.Idle04");
     static int idle05 = Animator.StringToHash("STAND_IDLES.Idle05");
 
@@ -55,12 +65,12 @@ public class b9Mecanim04 : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        anim.speed = animSpeed;     // set the speed of our animator to the public variable 'animSpeed'
-        animState = anim.GetCurrentAnimatorStateInfo(0); // GetAnimatorStateInfo(layerIndeX)
+        anim.speed = animSpeed;                         // Set the global speed of our animator
+        animState = anim.GetCurrentAnimatorStateInfo(0);// Get our animator's current state
 
-        JoyInput();                 //Apply inputs
-        AvatarSpeed();              //Read avatar current condition
-        LogicStates();
+        ControllerInput();                              //  Apply inputs
+        AvatarSpeed();                                  //  Read avatar current condition
+        LogicStates();                                  //  when what can be done
 
         //GenericInput();
     }
@@ -75,9 +85,8 @@ public class b9Mecanim04 : MonoBehaviour
         anim.SetFloat("absRotation", animRotABS);   //input Direcion absolute value
     }
 
-    void JoyInput()
+    void ControllerInput()
     {
-
         //Keybd Walk
         if (Input.GetKey(KeyCode.UpArrow))
             walk = Mathf.Lerp(walk, .5f, DampTime * Time.deltaTime);
@@ -104,16 +113,15 @@ public class b9Mecanim04 : MonoBehaviour
         if (Input.GetKey(KeyCode.LeftAlt) && Input.GetKey(KeyCode.LeftArrow))
         {
             strafe = Mathf.Lerp(strafe, -1f, DampTime * Time.deltaTime);
-            turn = Input.GetAxis("LHorizontal") * -1;
+            //turn = Input.GetAxis("LHorizontal") * -1;
         }
         else if (Input.GetKey(KeyCode.LeftAlt) && Input.GetKey(KeyCode.RightArrow))
         {
             strafe = Mathf.Lerp(strafe, 1f, DampTime * Time.deltaTime);
-            turn = Input.GetAxis("LHorizontal") * -1;
+            //turn = Input.GetAxis("LHorizontal") * -1;
         }
         else if (!Input.GetKey(KeyCode.LeftAlt) || (!Input.GetKey(KeyCode.LeftArrow) && !Input.GetKey(KeyCode.RightArrow)))
             strafe = Mathf.Lerp(strafe, 0f, DampTime * Time.deltaTime);
-
 
         //Keybd Turn
         if (Input.GetKey(KeyCode.LeftArrow))
@@ -122,42 +130,57 @@ public class b9Mecanim04 : MonoBehaviour
             turn = Mathf.Lerp(turn, 1f, DampTime * Time.deltaTime);
         else if (!Input.GetKey(KeyCode.LeftArrow) || !Input.GetKey(KeyCode.RightArrow))
             turn = Mathf.Lerp(turn, 0f, DampTime * Time.deltaTime);
-     
-        //LookAround
-        //rotAround = rotAround + (Input.GetAxis("6th axis") * 3f);     //stick input
-        anim.SetFloat("LookLR", Input.GetAxis("HatHorizontal"));							
 
         // Stick Controls
-        anim.SetFloat("LVert", Input.GetAxis("LVertical") + walk + run);							// set our animator's Speed to the Left Stick vertical input axis				
-        anim.SetFloat("LHoriz", Input.GetAxis("LHorizontal") + turn); 						// set our animator's Direction to the Left Stick horizontal input axis	
-        anim.SetFloat("RVert", Input.GetAxis("RVertical"));                         // Right Stick Vertical
-        anim.SetFloat("RHoriz", Input.GetAxis("RHorizontal") + strafe);             // Right Stick Horizontal
+        anim.SetFloat("ForeBack", Input.GetAxis("LVertical") + walk + run);					// set our animator's Speed to the Left Stick vertical input axis				
+        anim.SetFloat("LeftRight", Input.GetAxis("LHorizontal") + turn); 						// set our animator's Direction to the Left Stick horizontal input axis	
+        //anim.SetFloat("_____", Input.GetAxis("RVertical"));           // Right Stick Vertical
 
-        //composite input state (joystick + buttons)
-        allAxis = Mathf.Abs(Input.GetAxis("LVertical") + Input.GetAxis("LHorizontal") + Input.GetAxis("RVertical") + Input.GetAxis("RHorizontal") + Input.GetAxis("HatHorizontal") + Input.GetAxis("HatVertical"));
-        if (allAxis > .2 || Input.anyKeyDown)
+        //Controller Buttons
+        if (Input.GetButtonDown("joystick button 1(B)") || Input.GetKey(KeyCode.LeftAlt))
+            button1B=true;
+        else if (!Input.GetButton("joystick button 1(B)") && !Input.GetKey(KeyCode.LeftAlt))
+            button1B = false;
+        if (Input.GetButtonDown("joystick button 2(X)") || Input.GetKey(KeyCode.L))
+            button2X = true;
+        else if (!Input.GetButton("joystick button 2(X)") && !Input.GetKey(KeyCode.L))
+            button2X = false;
+
+        if (Input.GetButtonDown("joystick button 4(LB)") || Input.GetKey(KeyCode.Q))
+            button4LB = true;
+        else if (!Input.GetButton("joystick button 4(LB)") && !Input.GetKey(KeyCode.Q))
+            button4LB = false;
+        //if (Input.GetButtonDown("joystick button 5(RB)"))
+        //    button5RB = true;
+        //else if (Input.GetButtonUp("joystick button 5(RB)"))
+        //    button5RB = false;
+
+        //anim.SetBool("trigger1L", true);
+        //anim.SetBool("trigger2R", true);
+        anim.SetBool("triggerLBAlert", button4LB);
+        //anim.SetBool("triggerRB", button5RB);
+
+        anim.SetBool("buttonBstrafe", button1B);
+        anim.SetBool("buttonXLook", button2X);
+        //anim.SetBool("xboxYjump", true);
+        //anim.SetBool("xboxAcrouch", true);
+
+
+        //Composite Input (joystick + buttons)
+        //allAxis = Mathf.Abs(Input.GetAxis("LVertical") + Input.GetAxis("LHorizontal") + Input.GetAxis("RVertical") + Input.GetAxis("RHorizontal") + Input.GetAxis("HatHorizontal") + Input.GetAxis("HatVertical"));
+        allAxis = Mathf.Abs(Input.GetAxis("LVertical") + Input.GetAxis("LHorizontal") + Input.GetAxis("RVertical") + Input.GetAxis("RHorizontal"));
+        //ArrayList allButtons = new ArrayList() { Input.GetButton("joystick button 0(A)"), Input.GetButton("joystick button 1(B)"), Input.GetButton("joystick button 2(X)"), Input.GetButton("joystick button 3(Y)"), Input.GetButton("joystick button 4"), Input.GetButton("joystick button 5"), Input.GetButton("joystick button 6"), Input.GetButton("joystick button 7"), Input.GetButton("joystick button 8"), Input.GetButton("joystick button 9") };                
+        ArrayList allButtons = new ArrayList() { button0A, button1B, button2X, button3Y, button4LB, button5RB, button6, button7, button8, button9 };
+
+        if (Input.anyKeyDown || allButtons.Contains(true))                  //any keyb or button
+            anim.SetBool("AnyButton", true);
+        else
+            anim.SetBool("AnyButton", false);
+
+        if (allAxis > .2 || Input.anyKeyDown || allButtons.Contains(true))  //any keyb, button or stick
             anim.SetBool("AnyInput", true);
         else
             anim.SetBool("AnyInput", false);
-
-        //Controller Buttons
-        //Button Fire
-        if (Input.GetButtonDown("joystick button 5"))
-            anim.SetBool("Fire1Ctrl", true);
-        else if (Input.GetButtonUp("joystick button 5"))
-            anim.SetBool("Fire1Ctrl", false);
-        //anim.SetBool("Fire2Alt", true);
-        //anim.SetBool("Fire3Shift", true);
-        //Button Alert
-        if (Input.GetButtonDown("joystick button 4"))
-            anim.SetBool("Fire4Alert", true);
-        else if (Input.GetButtonUp("joystick button 4"))
-            anim.SetBool("Fire4Alert", false);
-
-        //anim.SetBool("xboxYjump", true);
-        //anim.SetBool("xboxAcrouch", true);
-        //anim.SetBool("Xstrafe", true);
-        //anim.SetBool("xboxB", true);
     }
 
     void LogicStates()
@@ -190,26 +213,7 @@ public class b9Mecanim04 : MonoBehaviour
             }
         }
     }
-        //V2
-        //if (animState.nameHash == idleState || animState.nameHash == idleVariants)
-        //{
-        //    int NextIdleVariant = Mathf.RoundToInt(UnityEngine.Random.Range(0, 4));  //select the next transition
-        //    anim.SetFloat("Rand", UnityEngine.Random.value);
-        //    anim.CrossFade(idleVariants, .1f, -1, 0f);
-        //}
 
-        // to Turn on place
-            //if (Altkey == false && h != 0f) //(!Input.anyKeyDown)
-            //{
-            //    anim.CrossFade(standTurnState, 0f, -1, 0f);
-            //    //print("turn");
-            //}
-
-            //Idle variations
-            //else if (Input.GetKey(KeyCode.I)) //(!Input.anyKeyDown)
-            //{
-            //    anim.CrossFade(idleSwitchFeetState, .3f, -1, 0f);
-            //}
 
 
         //=======OLD================

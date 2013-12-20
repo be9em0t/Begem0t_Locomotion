@@ -58,16 +58,18 @@ public class b9OnScreen : MonoBehaviour {
         GUI.Label(new Rect(10, 140, 200, 120), "KEYBOARD", smallStyle);
         GUI.Label(new Rect(10, 160, 200, 120), "Move avatar : Arrows", mainStyle);
         GUI.Label(new Rect(10, 180, 200, 120), "SpeedUp : LeftShift+Arrows", mainStyle);
-        GUI.Label(new Rect(10, 200, 200, 120), "Strafe/SideStep: Alt+Arrows", mainStyle);
-        GUI.Label(new Rect(10, 220, 200, 120), "Alert : L key", mainStyle);
+        GUI.Label(new Rect(10, 200, 200, 120), "SideStep: Alt+Arrows", mainStyle);
+        GUI.Label(new Rect(10, 220, 200, 120), "Look L/R: L+Arrows", mainStyle);
+        GUI.Label(new Rect(10, 240, 200, 120), "Alert : Q key", mainStyle);
 
-        GUI.Label(new Rect(10, 260, 200, 120), "GAMEPAD", smallStyle);
-        GUI.Label(new Rect(10, 280, 200, 120), "Camera : DPad", mainStyle);
-        GUI.Label(new Rect(10, 300, 200, 120), "Camera Reset : Back", mainStyle);
+        GUI.Label(new Rect(10, 280, 200, 120), "GAMEPAD", smallStyle);
+        GUI.Label(new Rect(10, 300, 200, 120), "Camera : DPad", mainStyle);
+        GUI.Label(new Rect(10, 320, 200, 120), "Camera Reset : Back/Home", mainStyle);
 
-        GUI.Label(new Rect(10, 320, 200, 120), "Move : Left Stick", mainStyle);
-        GUI.Label(new Rect(10, 340, 200, 120), "Strafe/SideStep: Right Stick", mainStyle);
-        GUI.Label(new Rect(10, 360, 200, 120), "Alert : Left Bumper", mainStyle);
+        GUI.Label(new Rect(10, 340, 200, 120), "Move : Left Stick", mainStyle);
+        GUI.Label(new Rect(10, 360, 200, 120), "Sidestep: LStick + xbox B", mainStyle);
+        GUI.Label(new Rect(10, 380, 200, 120), "Look L/R: LStick + xbox X", mainStyle);
+        GUI.Label(new Rect(10, 400, 200, 120), "Alert : Left Bumper", mainStyle);
 
         //GUI.Label(new Rect(10, 360, 200, 120), "Alert : Left Bumper", mainStyle);
         if (GUI.Button(new Rect(Screen.width - 110, 30, 30, 28), ".5x"))

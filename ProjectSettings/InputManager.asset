@@ -5,8 +5,8 @@ InputManager:
   m_ObjectHideFlags: 0
   m_Axes:
   - serializedVersion: 3
-    m_Name: joystick button 0
-    descriptiveName: 
+    m_Name: joystick button 0(A)
+    descriptiveName: A
     descriptiveNegativeName: 
     negativeButton: 
     positiveButton: joystick button 0
@@ -21,8 +21,8 @@ InputManager:
     axis: 0
     joyNum: 1
   - serializedVersion: 3
-    m_Name: joystick button 1
-    descriptiveName: 
+    m_Name: joystick button 1(B)
+    descriptiveName: B
     descriptiveNegativeName: 
     negativeButton: 
     positiveButton: joystick button 1
@@ -37,8 +37,8 @@ InputManager:
     axis: 0
     joyNum: 1
   - serializedVersion: 3
-    m_Name: joystick button 2
-    descriptiveName: 
+    m_Name: joystick button 2(X)
+    descriptiveName: X
     descriptiveNegativeName: 
     negativeButton: 
     positiveButton: joystick button 2
@@ -53,8 +53,8 @@ InputManager:
     axis: 0
     joyNum: 1
   - serializedVersion: 3
-    m_Name: joystick button 3
-    descriptiveName: 
+    m_Name: joystick button 3(Y)
+    descriptiveName: Y
     descriptiveNegativeName: 
     negativeButton: 
     positiveButton: joystick button 3
@@ -69,7 +69,7 @@ InputManager:
     axis: 0
     joyNum: 1
   - serializedVersion: 3
-    m_Name: joystick button 4
+    m_Name: joystick button 4(LB)
     descriptiveName: 
     descriptiveNegativeName: 
     negativeButton: 
@@ -85,7 +85,7 @@ InputManager:
     axis: 0
     joyNum: 1
   - serializedVersion: 3
-    m_Name: joystick button 5
+    m_Name: joystick button 5(RB)
     descriptiveName: 
     descriptiveNegativeName: 
     negativeButton: 

@@ -370,7 +370,7 @@ InputManager:
     snap: 0
     invert: 1
     type: 2
-    axis: 2
+    axis: 4
     joyNum: 1
   - serializedVersion: 3
     m_Name: RHorizontal
@@ -402,10 +402,10 @@ InputManager:
     snap: 0
     invert: 1
     type: 2
-    axis: 4
+    axis: 2
     joyNum: 1
   - serializedVersion: 3
-    m_Name: 6th axis
+    m_Name: HatHorizontal
     descriptiveName: 
     descriptiveNegativeName: 
     negativeButton: 
@@ -416,12 +416,12 @@ InputManager:
     dead: .100000001
     sensitivity: 1
     snap: 0
-    invert: 1
+    invert: 0
     type: 2
     axis: 5
     joyNum: 1
   - serializedVersion: 3
-    m_Name: 7th axis
+    m_Name: HatVertical
     descriptiveName: 
     descriptiveNegativeName: 
     negativeButton: 

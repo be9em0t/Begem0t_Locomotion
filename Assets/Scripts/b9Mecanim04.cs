@@ -123,6 +123,10 @@ public class b9Mecanim04 : MonoBehaviour
         else if (!Input.GetKey(KeyCode.LeftArrow) || !Input.GetKey(KeyCode.RightArrow))
             turn = Mathf.Lerp(turn, 0f, DampTime * Time.deltaTime);
      
+        //LookAround
+        //rotAround = rotAround + (Input.GetAxis("6th axis") * 3f);     //stick input
+        anim.SetFloat("LookLR", Input.GetAxis("HatHorizontal"));							
+
         // Stick Controls
         anim.SetFloat("LVert", Input.GetAxis("LVertical") + walk + run);							// set our animator's Speed to the Left Stick vertical input axis				
         anim.SetFloat("LHoriz", Input.GetAxis("LHorizontal") + turn); 						// set our animator's Direction to the Left Stick horizontal input axis	
@@ -130,7 +134,7 @@ public class b9Mecanim04 : MonoBehaviour
         anim.SetFloat("RHoriz", Input.GetAxis("RHorizontal") + strafe);             // Right Stick Horizontal
 
         //composite input state (joystick + buttons)
-        allAxis = Mathf.Abs(Input.GetAxis("LVertical") + Input.GetAxis("LHorizontal") + Input.GetAxis("RVertical") + Input.GetAxis("RHorizontal"));
+        allAxis = Mathf.Abs(Input.GetAxis("LVertical") + Input.GetAxis("LHorizontal") + Input.GetAxis("RVertical") + Input.GetAxis("RHorizontal") + Input.GetAxis("HatHorizontal") + Input.GetAxis("HatVertical"));
         if (allAxis > .2 || Input.anyKeyDown)
             anim.SetBool("AnyInput", true);
         else

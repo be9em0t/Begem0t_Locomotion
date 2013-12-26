@@ -69,7 +69,7 @@ public class b9CameraControl : MonoBehaviour {
 		{
 			vertOffset=vertOffset+(1 * Time.deltaTime);
 		}
-        vertOffset = vertOffset + (Input.GetAxis("HatVertical") / 50);  //stick input
+        //vertOffset = vertOffset + (Input.GetAxis("HatVertical") / 50);  //stick input
         //Camera Zoom
         if (Input.GetKey(KeyCode.PageUp))
         {
@@ -79,6 +79,7 @@ public class b9CameraControl : MonoBehaviour {
         {
             cameraZoom = cameraZoom + (10 * Time.deltaTime);
         }
+        cameraZoom = cameraZoom + (Input.GetAxis("HatVertical")/2);  //stick input
         //Reset Camera
         if (Input.GetKey(KeyCode.Home) || Input.GetButtonDown("joystick button 6"))
         {

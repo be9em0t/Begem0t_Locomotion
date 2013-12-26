@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 1fe3d48d9e9026d4aa0aaa7feb977f2a
+guid: 3e1e8579c90f039499f8b9040ad026bf
 ModelImporter:
   serializedVersion: 15
   fileIDToRecycleName:
@@ -14,20 +14,20 @@ ModelImporter:
     100016: LeftToeBase
     100018: LeftUpLeg
     100020: Neck
-    100022: //RootNode
-    100024: Reference
-    100026: RightArm
-    100028: RightFoot
-    100030: RightForeArm
-    100032: RightHand
-    100034: RightLeg
-    100036: RightShoulder
-    100038: RightToeBase
-    100040: RightUpLeg
-    100042: Spine
-    100044: Spine1
-    100046: Spine2
-    100048: Spine3
+    100022: Reference
+    100024: RightArm
+    100026: RightFoot
+    100028: RightForeArm
+    100030: RightHand
+    100032: RightLeg
+    100034: RightShoulder
+    100036: RightToeBase
+    100038: RightUpLeg
+    100040: Spine
+    100042: Spine1
+    100044: Spine2
+    100046: Spine3
+    100048: //RootNode
     400000: Head
     400002: Hips
     400004: LeftArm
@@ -39,22 +39,21 @@ ModelImporter:
     400016: LeftToeBase
     400018: LeftUpLeg
     400020: Neck
-    400022: //RootNode
-    400024: Reference
-    400026: RightArm
-    400028: RightFoot
-    400030: RightForeArm
-    400032: RightHand
-    400034: RightLeg
-    400036: RightShoulder
-    400038: RightToeBase
-    400040: RightUpLeg
-    400042: Spine
-    400044: Spine1
-    400046: Spine2
-    400048: Spine3
-    7400000: Stand_Idle01
-    7400002: Stand_Idle02 change legs
+    400022: Reference
+    400024: RightArm
+    400026: RightFoot
+    400028: RightForeArm
+    400030: RightHand
+    400032: RightLeg
+    400034: RightShoulder
+    400036: RightToeBase
+    400038: RightUpLeg
+    400040: Spine
+    400042: Spine1
+    400044: Spine2
+    400046: Spine3
+    400048: //RootNode
+    7400000: Idle_LookL test
     9500000: //RootNode
   materials:
     importMaterials: 1
@@ -72,93 +71,17 @@ ModelImporter:
     extraExposedTransformPaths: []
     clipAnimations:
     - serializedVersion: 16
-      name: Stand_Idle01
-      takeName: New Session-003c_Idle
-      firstFrame: 4982
-      lastFrame: 5170
+      name: Idle_LookL test
+      takeName: Vla13-12-10_-015 stand idle, alert, jumps
+      firstFrame: 2232
+      lastFrame: 2377
       wrapMode: 0
       orientationOffsetY: 0
       level: 0
       cycleOffset: 0
       loop: 0
       loopTime: 1
-      loopBlend: 0
-      loopBlendOrientation: 1
-      loopBlendPositionY: 1
-      loopBlendPositionXZ: 0
-      keepOriginalOrientation: 0
-      keepOriginalPositionY: 0
-      keepOriginalPositionXZ: 0
-      heightFromFeet: 1
-      mirror: 0
-      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
-      curves: []
-      events: []
-      transformMask:
-      - path: 
-        weight: 1
-      - path: Reference
-        weight: 1
-      - path: Reference/Hips
-        weight: 1
-      - path: Reference/Hips/LeftUpLeg
-        weight: 1
-      - path: Reference/Hips/LeftUpLeg/LeftLeg
-        weight: 1
-      - path: Reference/Hips/LeftUpLeg/LeftLeg/LeftFoot
-        weight: 1
-      - path: Reference/Hips/LeftUpLeg/LeftLeg/LeftFoot/LeftToeBase
-        weight: 1
-      - path: Reference/Hips/RightUpLeg
-        weight: 1
-      - path: Reference/Hips/RightUpLeg/RightLeg
-        weight: 1
-      - path: Reference/Hips/RightUpLeg/RightLeg/RightFoot
-        weight: 1
-      - path: Reference/Hips/RightUpLeg/RightLeg/RightFoot/RightToeBase
-        weight: 1
-      - path: Reference/Hips/Spine
-        weight: 1
-      - path: Reference/Hips/Spine/Spine1
-        weight: 1
-      - path: Reference/Hips/Spine/Spine1/Spine2
-        weight: 1
-      - path: Reference/Hips/Spine/Spine1/Spine2/Spine3
-        weight: 1
-      - path: Reference/Hips/Spine/Spine1/Spine2/Spine3/LeftShoulder
-        weight: 1
-      - path: Reference/Hips/Spine/Spine1/Spine2/Spine3/LeftShoulder/LeftArm
-        weight: 1
-      - path: Reference/Hips/Spine/Spine1/Spine2/Spine3/LeftShoulder/LeftArm/LeftForeArm
-        weight: 1
-      - path: Reference/Hips/Spine/Spine1/Spine2/Spine3/LeftShoulder/LeftArm/LeftForeArm/LeftHand
-        weight: 1
-      - path: Reference/Hips/Spine/Spine1/Spine2/Spine3/Neck
-        weight: 1
-      - path: Reference/Hips/Spine/Spine1/Spine2/Spine3/Neck/Head
-        weight: 1
-      - path: Reference/Hips/Spine/Spine1/Spine2/Spine3/RightShoulder
-        weight: 1
-      - path: Reference/Hips/Spine/Spine1/Spine2/Spine3/RightShoulder/RightArm
-        weight: 1
-      - path: Reference/Hips/Spine/Spine1/Spine2/Spine3/RightShoulder/RightArm/RightForeArm
-        weight: 1
-      - path: Reference/Hips/Spine/Spine1/Spine2/Spine3/RightShoulder/RightArm/RightForeArm/RightHand
-        weight: 1
-      maskType: 0
-      maskSource: {instanceID: 0}
-    - serializedVersion: 16
-      name: Stand_Idle02 change legs
-      takeName: New Session-003c_Idle
-      firstFrame: 5399
-      lastFrame: 5761
-      wrapMode: 0
-      orientationOffsetY: 0
-      level: 0
-      cycleOffset: 0
-      loop: 0
-      loopTime: 1
-      loopBlend: 0
+      loopBlend: 1
       loopBlendOrientation: 0
       loopBlendPositionY: 1
       loopBlendPositionXZ: 0
@@ -417,129 +340,129 @@ ModelImporter:
         length: 0
         modified: 0
     skeleton:
-    - name: New Session-003c_Idle(Clone)
+    - name: Stand_Idle0x_LookL(Clone)
       position: {x: 0, y: 0, z: 0}
       rotation: {x: 0, y: 0, z: 0, w: 1}
       scale: {x: 1, y: 1, z: 1}
       transformModified: 1
     - name: Reference
-      position: {x: 0, y: .921894193, z: 0}
+      position: {x: .996762693, y: .936885834, z: 4.11546755}
       rotation: {x: 0, y: -0, z: 0, w: 1}
       scale: {x: 1, y: 1, z: 1}
       transformModified: 1
     - name: Hips
-      position: {x: 0, y: .0276532769, z: 0}
+      position: {x: -.996762693, y: .0146222115, z: -4.11546755}
       rotation: {x: 0, y: -0, z: -0, w: 1}
       scale: {x: 1, y: 1, z: 1}
       transformModified: 1
     - name: LeftUpLeg
-      position: {x: -.0834532082, y: -.000120208904, z: 8.47032947e-22}
-      rotation: {x: 0, y: -0, z: -0, w: 1}
+      position: {x: -.0834531635, y: -.000119576165, z: -1.22058218e-05}
+      rotation: {x: -4.79818618e-06, y: -5.21309666e-13, z: -1.66369585e-08, w: 1}
       scale: {x: 1, y: 1, z: 1}
       transformModified: 1
     - name: LeftLeg
-      position: {x: -0, y: -.43439132, z: -.0208726432}
-      rotation: {x: 0, y: -0, z: -0, w: 1}
+      position: {x: -5.25779686e-09, y: -.434892774, z: 1.1542119e-05}
+      rotation: {x: 9.70071051e-06, y: -6.65553767e-13, z: -1.15997012e-12, w: 1}
       scale: {x: 1, y: 1, z: 1}
       transformModified: 1
     - name: LeftFoot
-      position: {x: -0, y: -.42354393, z: -.0344913937}
-      rotation: {x: 0, y: -0, z: -0, w: 1}
+      position: {x: 7.6380724e-09, y: -.424946785, z: 1.95261709e-05}
+      rotation: {x: -4.90252432e-06, y: 1.34825929e-12, z: 1.66381184e-08, w: 1}
       scale: {x: 1, y: 1, z: 1}
       transformModified: 1
     - name: LeftToeBase
-      position: {x: -0, y: -.0638387725, z: .143719941}
+      position: {x: -1.53164397e-08, y: -.0638388023, z: .143719971}
       rotation: {x: 0, y: -0, z: -0, w: 1}
       scale: {x: 1, y: 1, z: 1}
       transformModified: 1
     - name: RightUpLeg
-      position: {x: .0834532082, y: -.000120208904, z: 0}
-      rotation: {x: 0, y: -0, z: -0, w: 1}
+      position: {x: .0834531933, y: -.000119548131, z: -1.22019592e-05}
+      rotation: {x: -4.793073e-06, y: 3.47611561e-13, z: 1.10913128e-08, w: 1}
       scale: {x: 1, y: 1, z: 1}
       transformModified: 1
     - name: RightLeg
-      position: {x: -0, y: -.43439132, z: -.0208726432}
-      rotation: {x: 0, y: -0, z: -0, w: 1}
+      position: {x: 7.0737336e-09, y: -.434892505, z: 1.15460352e-05}
+      rotation: {x: 9.73958777e-06, y: -5.36205954e-13, z: -1.18038782e-12, w: 1}
       scale: {x: 1, y: 1, z: 1}
       transformModified: 1
     - name: RightFoot
-      position: {x: -0, y: -.42354393, z: -.0344913937}
-      rotation: {x: 0, y: -0, z: -0, w: 1}
+      position: {x: -3.74412634e-09, y: -.424946517, z: 1.9556901e-05}
+      rotation: {x: -4.94651476e-06, y: 8.05751746e-14, z: -1.10901324e-08, w: 1}
       scale: {x: 1, y: 1, z: 1}
       transformModified: 1
     - name: RightToeBase
-      position: {x: -0, y: -.0638387725, z: .143719941}
+      position: {x: 3.23965388e-09, y: -.0638388693, z: .143720075}
       rotation: {x: 0, y: -0, z: -0, w: 1}
       scale: {x: 1, y: 1, z: 1}
       transformModified: 1
     - name: Spine
-      position: {x: -0, y: .102470584, z: -.0104316492}
-      rotation: {x: 0, y: -0, z: -0, w: 1}
+      position: {x: 5.08165003e-11, y: .103000179, z: 2.44206094e-05}
+      rotation: {x: 2.79370502e-11, y: -2.62922279e-19, z: -4.87591822e-30, w: 1}
       scale: {x: 1, y: 1, z: 1}
       transformModified: 1
     - name: Spine1
-      position: {x: -0, y: .113368765, z: .0104525862}
+      position: {x: 2.21890464e-10, y: .113849618, z: -4.43358986e-05}
       rotation: {x: 0, y: -0, z: -0, w: 1}
       scale: {x: 1, y: 1, z: 1}
       transformModified: 1
     - name: Spine2
-      position: {x: -0, y: .10287109, z: 0}
+      position: {x: -3.87196386e-10, y: .10287106, z: 1.7766697e-09}
       rotation: {x: 0, y: -0, z: -0, w: 1}
       scale: {x: 1, y: 1, z: 1}
       transformModified: 1
     - name: Spine3
-      position: {x: -0, y: .10287109, z: 0}
+      position: {x: 6.64223787e-10, y: .102871008, z: -1.24888866e-09}
       rotation: {x: 0, y: -0, z: -0, w: 1}
       scale: {x: 1, y: 1, z: 1}
       transformModified: 1
     - name: LeftShoulder
-      position: {x: -.0313691162, y: .0807544887, z: 0}
+      position: {x: -.0313691199, y: .0807545558, z: -8.61156646e-10}
       rotation: {x: 0, y: -0, z: -0, w: 1}
       scale: {x: 1, y: 1, z: 1}
       transformModified: 1
     - name: LeftArm
-      position: {x: -.145548388, y: 0, z: 0}
+      position: {x: -.145548537, y: -3.64249586e-09, z: 1.73451853e-09}
       rotation: {x: 0, y: -0, z: -0, w: 1}
       scale: {x: 1, y: 1, z: 1}
       transformModified: 1
     - name: LeftForeArm
-      position: {x: -.311410487, y: 0, z: 0}
-      rotation: {x: 0, y: -0, z: -0, w: 1}
+      position: {x: -.311410487, y: 3.77424527e-08, z: 1.74591062e-08}
+      rotation: {x: 1.73472348e-18, y: 2.01580246e-08, z: -6.4923998e-14, w: 1}
       scale: {x: 1, y: 1, z: 1}
       transformModified: 1
     - name: LeftHand
-      position: {x: -.254425853, y: 0, z: .0103847301}
-      rotation: {x: 0, y: -0, z: -0, w: 1}
+      position: {x: -.254637629, y: 7.3505726e-09, z: 1.08683729e-08}
+      rotation: {x: 0, y: 0, z: 5.17285524e-30, w: 1}
       scale: {x: 1, y: 1, z: 1}
       transformModified: 1
     - name: Neck
-      position: {x: -0, y: .144778788, z: 0}
-      rotation: {x: 0, y: -0, z: -0, w: 1}
+      position: {x: 4.93315555e-10, y: .144778863, z: -6.46512288e-10}
+      rotation: {x: -1.50262626e-33, y: -1.21136196e-18, z: -1.24044375e-15, w: 1}
       scale: {x: 1, y: 1, z: 1}
       transformModified: 1
     - name: Head
-      position: {x: -0, y: .0934278443, z: .0208869763}
-      rotation: {x: 0, y: -0, z: -0, w: 1}
+      position: {x: -3.30321592e-09, y: .0957340524, z: -.000105338346}
+      rotation: {x: -1.50263718e-33, y: 1.21137075e-18, z: 1.24044375e-15, w: 1}
       scale: {x: 1, y: 1, z: 1}
       transformModified: 1
     - name: RightShoulder
-      position: {x: .0313691162, y: .0807544887, z: 0}
+      position: {x: .0313691311, y: .0807545036, z: -4.18144269e-10}
       rotation: {x: 0, y: -0, z: -0, w: 1}
       scale: {x: 1, y: 1, z: 1}
       transformModified: 1
     - name: RightArm
-      position: {x: .145548388, y: 0, z: 0}
+      position: {x: .145548448, y: -2.59552326e-08, z: -1.93714444e-09}
       rotation: {x: 0, y: -0, z: -0, w: 1}
       scale: {x: 1, y: 1, z: 1}
       transformModified: 1
     - name: RightForeArm
-      position: {x: .311410487, y: 0, z: 0}
-      rotation: {x: 0, y: -0, z: -0, w: 1}
+      position: {x: .311410367, y: -3.311143e-08, z: 1.73146724e-08}
+      rotation: {x: 1.73472348e-18, y: -6.04999997e-08, z: 7.00447187e-14, w: 1}
       scale: {x: 1, y: 1, z: 1}
       transformModified: 1
     - name: RightHand
-      position: {x: .254425853, y: 0, z: .0103847301}
-      rotation: {x: 0, y: -0, z: -0, w: 1}
+      position: {x: .254637718, y: -2.3680343e-08, z: -1.99505816e-08}
+      rotation: {x: -3.23117427e-27, y: -0, z: 2.25410841e-30, w: 1}
       scale: {x: 1, y: 1, z: 1}
       transformModified: 1
     armTwist: .5

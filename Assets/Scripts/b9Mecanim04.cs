@@ -6,6 +6,8 @@ public class b9Mecanim04 : MonoBehaviour
 {
     public float DampTime = 3f;                     // adjust motion lerping:  0 - infinity, 10 almost instant, default 3
     public static float animSpeed = 1f;             // global animation speed
+    int CurrentIdleVariant = 1;
+    int NextIdleVariant = 1;
 
     //Actual Animator speed and turn rates
     float animSpeedABS;             //absolute values of Animator
@@ -40,6 +42,7 @@ public class b9Mecanim04 : MonoBehaviour
     static int idle03 = Animator.StringToHash("STAND_IDLES.Idle03");
     static int idle04 = Animator.StringToHash("STAND_IDLES.Idle04");
     static int idle05 = Animator.StringToHash("STAND_IDLES.Idle05");
+    static int idle06 = Animator.StringToHash("STAND_IDLES.Idle06");
 
     //===OLD===
     // private AnimatorStateInfo animState;			// a reference to the current state of the animator, used for base layer
@@ -189,23 +192,25 @@ public class b9Mecanim04 : MonoBehaviour
         if (animState.nameHash == idleState)    //Default Idle state
             IdleVariants();
 
-        if (animState.nameHash == idle01 || animState.nameHash == idle02 || animState.nameHash == idle03 || animState.nameHash == idle04 || animState.nameHash == idle05)   //Switching between Idle Variants
-                IdleVariants();
+        if (animState.nameHash == idle01 || animState.nameHash == idle02 || animState.nameHash == idle03 || animState.nameHash == idle04 || animState.nameHash == idle05 || animState.nameHash == idle06)   //Switching between Idle Variants
+            IdleVariants();
     }
 
     void IdleVariants()
     {
         {
-            int[] IdleAnims = new int[5] { idle01, idle02, idle03, idle04, idle05 };                //List of available variant anims
-            int NextIdleVariant = Mathf.RoundToInt(UnityEngine.Random.Range(1, IdleAnims.Length));  //random select next transition
+            int[] IdleAnims = new int[6] { idle01, idle02, idle03, idle04, idle05, idle06 };                //List of available variant anims
 
             int animLoopNum = (int)animState.normalizedTime;
             float animPercent = Mathf.Round(((animState.normalizedTime - animLoopNum) * 100f)) / 100f;     //round to DP2
 
             if (animPercent > .85f && canChangeState == true)       //crossfade after this percent
             {
-                canChangeState = false;
-                anim.CrossFade(IdleAnims[NextIdleVariant], .1f, -1, 0f);
+                canChangeState = false;                             //stop state change until next crossfade
+                CurrentIdleVariant = NextIdleVariant;               //start selection of next random clip
+                while (CurrentIdleVariant == NextIdleVariant)
+                    NextIdleVariant = Mathf.RoundToInt(UnityEngine.Random.Range(1, IdleAnims.Length));  //random select next transition
+                anim.CrossFade(IdleAnims[NextIdleVariant], .1f, -1, 0f);    //Crossfade to
             }
             else if (animPercent < .3f && canChangeState == false)  //arm for a new crossfade
             {

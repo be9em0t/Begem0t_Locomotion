@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 66b62609d450b50438e2528cbc82466c
+guid: 1fe3d48d9e9026d4aa0aaa7feb977f2a
 ModelImporter:
   serializedVersion: 15
   fileIDToRecycleName:
@@ -53,8 +53,8 @@ ModelImporter:
     400044: Spine1
     400046: Spine2
     400048: Spine3
-    7400000: Walk_Back_TurnL
-    7400002: Walk_Back_TurnR
+    7400000: Stand_Idle01
+    7400002: Stand_Idle02 change legs OK
     9500000: //RootNode
   materials:
     importMaterials: 1
@@ -72,19 +72,19 @@ ModelImporter:
     extraExposedTransformPaths: []
     clipAnimations:
     - serializedVersion: 16
-      name: Walk_Back_TurnL
-      takeName: New Session-003b_walk back turns
-      firstFrame: 3806.8999
-      lastFrame: 3844.3999
+      name: Stand_Idle01
+      takeName: New Session-003c_Idle
+      firstFrame: 5041
+      lastFrame: 5151
       wrapMode: 0
       orientationOffsetY: 0
       level: 0
       cycleOffset: 0
       loop: 0
       loopTime: 1
-      loopBlend: 0
-      loopBlendOrientation: 0
-      loopBlendPositionY: 0
+      loopBlend: 1
+      loopBlendOrientation: 1
+      loopBlendPositionY: 1
       loopBlendPositionXZ: 0
       keepOriginalOrientation: 0
       keepOriginalPositionY: 0
@@ -148,19 +148,19 @@ ModelImporter:
       maskType: 0
       maskSource: {instanceID: 0}
     - serializedVersion: 16
-      name: Walk_Back_TurnR
-      takeName: New Session-003b_walk back turns
-      firstFrame: 4207
-      lastFrame: 4245
+      name: Stand_Idle02 change legs OK
+      takeName: New Session-003c_Idle
+      firstFrame: 5392
+      lastFrame: 5764
       wrapMode: 0
       orientationOffsetY: 0
       level: 0
       cycleOffset: 0
       loop: 0
       loopTime: 1
-      loopBlend: 0
+      loopBlend: 1
       loopBlendOrientation: 0
-      loopBlendPositionY: 0
+      loopBlendPositionY: 1
       loopBlendPositionXZ: 0
       keepOriginalOrientation: 0
       keepOriginalPositionY: 0
@@ -417,7 +417,7 @@ ModelImporter:
         length: 0
         modified: 0
     skeleton:
-    - name: New Session-003b_walk back turns(Clone)
+    - name: New Session-003c_Idle(Clone)
       position: {x: 0, y: 0, z: 0}
       rotation: {x: 0, y: 0, z: 0, w: 1}
       scale: {x: 1, y: 1, z: 1}

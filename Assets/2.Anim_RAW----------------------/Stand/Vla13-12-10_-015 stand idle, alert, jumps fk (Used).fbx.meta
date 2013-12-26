@@ -57,14 +57,14 @@ ModelImporter:
     400050: //RootNode
     7400000: Idle-2-Alert
     7400002: Idle-2-Alert v2
-    7400004: Idle-2-Alert v3 OK
+    7400004: Idle-2-Alert v3
     7400006: Idle-Alert v4 Left Leg
     7400008: Idle-2-Alert v4 Right Leg
-    7400010: Idle 01 Static
-    7400012: Idle 02 LookR
+    7400010: Idle 01 Static OK
+    7400012: Idle 02 LookR OK
     7400014: Idle 03 Subtle Short
-    7400016: Idle 04 Subtle Head
-    7400018: Idle 05 LookL
+    7400016: Idle 04 Subtle Head OK
+    7400018: Idle 05 LookL OK
     7400020: Jumps WIP
     7400022: Idle-2-Alert 03 Start
     7400024: Alert 03 Loop
@@ -164,7 +164,7 @@ ModelImporter:
       maskType: 0
       maskSource: {instanceID: 0}
     - serializedVersion: 16
-      name: Idle-2-Alert v3 OK
+      name: Idle-2-Alert v3
       takeName: Vla13-12-10_-015 stand idle, alert, jumps
       firstFrame: 6950
       lastFrame: 7055
@@ -398,7 +398,7 @@ ModelImporter:
       maskType: 0
       maskSource: {instanceID: 0}
     - serializedVersion: 16
-      name: Idle 01 Static
+      name: Idle 01 Static OK
       takeName: Vla13-12-10_-015 stand idle, alert, jumps
       firstFrame: 331
       lastFrame: 388
@@ -476,7 +476,7 @@ ModelImporter:
       maskType: 0
       maskSource: {instanceID: 0}
     - serializedVersion: 16
-      name: Idle 02 LookR
+      name: Idle 02 LookR OK
       takeName: Vla13-12-10_-015 stand idle, alert, jumps
       firstFrame: 609
       lastFrame: 928
@@ -632,7 +632,7 @@ ModelImporter:
       maskType: 0
       maskSource: {instanceID: 0}
     - serializedVersion: 16
-      name: Idle 04 Subtle Head
+      name: Idle 04 Subtle Head OK
       takeName: Vla13-12-10_-015 stand idle, alert, jumps
       firstFrame: 1798
       lastFrame: 1994
@@ -710,7 +710,7 @@ ModelImporter:
       maskType: 0
       maskSource: {instanceID: 0}
     - serializedVersion: 16
-      name: Idle 05 LookL
+      name: Idle 05 LookL OK
       takeName: Vla13-12-10_-015 stand idle, alert, jumps
       firstFrame: 2231
       lastFrame: 2377

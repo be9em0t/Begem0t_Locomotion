@@ -54,7 +54,7 @@ ModelImporter:
     400046: Spine2
     400048: Spine3
     7400000: Stand_Idle
-    7400002: Stand_Idle (Soft Switch Legs)
+    7400002: Stand_Idle (Soft Switch Legs) OK
     9500000: //RootNode
   materials:
     importMaterials: 1
@@ -72,7 +72,7 @@ ModelImporter:
     extraExposedTransformPaths: []
     clipAnimations:
     - serializedVersion: 16
-      name: Stand_Idle (Soft Switch Legs)
+      name: Stand_Idle (Soft Switch Legs) OK
       takeName: New Session-008a idle
       firstFrame: 748
       lastFrame: 1036

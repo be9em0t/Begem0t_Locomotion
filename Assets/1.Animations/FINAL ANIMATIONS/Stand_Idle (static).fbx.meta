@@ -157,7 +157,7 @@ ModelImporter:
     400148: TongueBack
     400150: TongueTip
     400152: UD_Reference
-    7400000: Stand_Idle (static)
+    7400000: Stand_Idle (static old)
     9500000: //RootNode
   materials:
     importMaterials: 1
@@ -175,7 +175,7 @@ ModelImporter:
     extraExposedTransformPaths: []
     clipAnimations:
     - serializedVersion: 16
-      name: Stand_Idle (static)
+      name: Stand_Idle (static old)
       takeName: stand_idles WIP
       firstFrame: 1
       lastFrame: 211

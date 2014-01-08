@@ -19,8 +19,7 @@ Library/ScriptAssemblies/*
 
 FBX Sources/*.zip
 FBX Sources/*.rar
-
-Unity Sources/*
+FBX Sources/Unity Sources/*
 
 AnnotationManager
 assetDatabase3

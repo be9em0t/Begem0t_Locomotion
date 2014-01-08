@@ -1,6 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 using System;
+using System.Collections.Generic;
 
 public class b9Mecanim04 : MonoBehaviour
 {
@@ -42,7 +43,7 @@ public class b9Mecanim04 : MonoBehaviour
     static int idle03 = Animator.StringToHash("STAND_IDLES.Idle03");
     static int idle04 = Animator.StringToHash("STAND_IDLES.Idle04");
     static int idle05 = Animator.StringToHash("STAND_IDLES.Idle05");
-    static int idle06 = Animator.StringToHash("STAND_IDLES.Idle06");
+    //static int idle06 = Animator.StringToHash("STAND_IDLES.Idle06");
 
     //===OLD===
     // private AnimatorStateInfo animState;			// a reference to the current state of the animator, used for base layer
@@ -63,6 +64,7 @@ public class b9Mecanim04 : MonoBehaviour
     void Start()
     {
         anim = GetComponent<Animator>();
+        //ac = GetComponent<Animator>().runtimeAnimatorController as UnityEditorInternal.AnimatorController;        
     }
 
     // Update is called once per frame
@@ -192,14 +194,14 @@ public class b9Mecanim04 : MonoBehaviour
         if (animState.nameHash == idleState)    //Default Idle state
             IdleVariants();
 
-        if (animState.nameHash == idle01 || animState.nameHash == idle02 || animState.nameHash == idle03 || animState.nameHash == idle04 || animState.nameHash == idle05 || animState.nameHash == idle06)   //Switching between Idle Variants
+        if (animState.nameHash == idle01 || animState.nameHash == idle02 || animState.nameHash == idle03 || animState.nameHash == idle04 || animState.nameHash == idle05 )   //Switching between Idle Variants
             IdleVariants();
     }
 
     void IdleVariants()
     {
         {
-            int[] IdleAnims = new int[6] { idle01, idle02, idle03, idle04, idle05, idle06 };                //List of available variant anims
+            int[] IdleAnims = new int[5] { idle01, idle02, idle03, idle04, idle05 };                //List of available variant anims
 
             int animLoopNum = (int)animState.normalizedTime;
             float animPercent = Mathf.Round(((animState.normalizedTime - animLoopNum) * 100f)) / 100f;     //round to DP2

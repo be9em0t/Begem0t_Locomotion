@@ -17,6 +17,11 @@ Library/metadata/*
 Library/previews/*
 Library/ScriptAssemblies/*
 
+FBX Sources/*.zip
+FBX Sources/*.rar
+
+Unity Sources/*
+
 AnnotationManager
 assetDatabase3
 AssetImportState

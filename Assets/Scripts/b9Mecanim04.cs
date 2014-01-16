@@ -37,6 +37,7 @@ public class b9Mecanim04 : MonoBehaviour
     bool canChangeState = true;
 
     static int idleState = Animator.StringToHash("Base Layer.Stand_Idle");
+    static int run2stand = Animator.StringToHash("MOVE_AHEAD.Walk-2-Stand");
 
     static int idle01 = Animator.StringToHash("STAND_IDLES.Idle01");
     static int idle02 = Animator.StringToHash("STAND_IDLES.Idle02");
@@ -112,6 +113,7 @@ public class b9Mecanim04 : MonoBehaviour
                 run = Mathf.Lerp(run, -.5f, DampTime * Time.deltaTime);
             else if (!Input.GetKey(KeyCode.LeftShift))
                 run = Mathf.Lerp(run, 0f, (DampTime / 2) * Time.deltaTime);
+
         }
 
         //Keybd Alt-Strafe
@@ -177,12 +179,15 @@ public class b9Mecanim04 : MonoBehaviour
         //ArrayList allButtons = new ArrayList() { Input.GetButton("joystick button 0(A)"), Input.GetButton("joystick button 1(B)"), Input.GetButton("joystick button 2(X)"), Input.GetButton("joystick button 3(Y)"), Input.GetButton("joystick button 4"), Input.GetButton("joystick button 5"), Input.GetButton("joystick button 6"), Input.GetButton("joystick button 7"), Input.GetButton("joystick button 8"), Input.GetButton("joystick button 9") };                
         ArrayList allButtons = new ArrayList() { button0A, button1B, button2X, button3Y, button4LB, button5RB, button6, button7, button8, button9 };
 
-        if (Input.anyKeyDown || allButtons.Contains(true))                  //any keyb or button
+        if (Input.anyKey || allButtons.Contains(true))                  //any keyb or button
+        {
             anim.SetBool("AnyButton", true);
+            //print("anykey");
+        }
         else
             anim.SetBool("AnyButton", false);
 
-        if (allAxis > .2 || Input.anyKeyDown || allButtons.Contains(true))  //any keyb, button or stick
+        if (allAxis > .2 || Input.anyKey || allButtons.Contains(true))  //any keyb, button or stick
             anim.SetBool("AnyInput", true);
         else
             anim.SetBool("AnyInput", false);

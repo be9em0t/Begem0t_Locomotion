@@ -65,7 +65,6 @@ public class b9Mecanim04 : MonoBehaviour
     void Start()
     {
         anim = GetComponent<Animator>();
-        //ac = GetComponent<Animator>().runtimeAnimatorController as UnityEditorInternal.AnimatorController;        
     }
 
     // Update is called once per frame

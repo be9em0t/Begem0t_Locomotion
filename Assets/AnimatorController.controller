@@ -1568,6 +1568,24 @@ Transition:
   m_Atomic: 0
   m_Solo: 0
   m_Mute: 0
+--- !u!1101 &110117049
+Transition:
+  m_ObjectHideFlags: 3
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_Name: 
+  m_SrcState: {fileID: 110278755}
+  m_DstState: {fileID: 110279204}
+  m_TransitionDuration: .035545025
+  m_TransitionOffset: 0
+  m_Conditions:
+  - m_ConditionMode: 3
+    m_ConditionEvent: LeftRight
+    m_EventTreshold: .100000001
+    m_ExitTime: .964454949
+  m_Atomic: 1
+  m_Solo: 0
+  m_Mute: 0
 --- !u!1101 &110117120
 Transition:
   m_ObjectHideFlags: 3
@@ -2122,6 +2140,24 @@ Transition:
   m_Atomic: 1
   m_Solo: 0
   m_Mute: 0
+--- !u!1101 &110145881
+Transition:
+  m_ObjectHideFlags: 3
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_Name: 
+  m_SrcState: {fileID: 110279204}
+  m_DstState: {fileID: 110202307}
+  m_TransitionDuration: .0604837909
+  m_TransitionOffset: 0
+  m_Conditions:
+  - m_ConditionMode: 3
+    m_ConditionEvent: ForeBack
+    m_EventTreshold: .100000001
+    m_ExitTime: .939516187
+  m_Atomic: 1
+  m_Solo: 0
+  m_Mute: 0
 --- !u!1101 &110146046
 Transition:
   m_ObjectHideFlags: 3
@@ -2636,6 +2672,24 @@ Transition:
   m_Atomic: 1
   m_Solo: 0
   m_Mute: 0
+--- !u!1101 &110170073
+Transition:
+  m_ObjectHideFlags: 3
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_Name: 
+  m_SrcState: {fileID: 110278755}
+  m_DstState: {fileID: 110279204}
+  m_TransitionDuration: .035545025
+  m_TransitionOffset: 0
+  m_Conditions:
+  - m_ConditionMode: 4
+    m_ConditionEvent: LeftRight
+    m_EventTreshold: -.100000001
+    m_ExitTime: .964454949
+  m_Atomic: 1
+  m_Solo: 0
+  m_Mute: 0
 --- !u!1101 &110170510
 Transition:
   m_ObjectHideFlags: 3
@@ -2934,6 +2988,24 @@ Transition:
   m_Atomic: 1
   m_Solo: 0
   m_Mute: 0
+--- !u!1101 &110186578
+Transition:
+  m_ObjectHideFlags: 3
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_Name: 
+  m_SrcState: {fileID: 110279204}
+  m_DstState: {fileID: 110278755}
+  m_TransitionDuration: .0604837909
+  m_TransitionOffset: 0
+  m_Conditions:
+  - m_ConditionMode: 5
+    m_ConditionEvent: 
+    m_EventTreshold: 0
+    m_ExitTime: .939516187
+  m_Atomic: 1
+  m_Solo: 0
+  m_Mute: 0
 --- !u!1101 &110187354
 Transition:
   m_ObjectHideFlags: 3
@@ -3193,7 +3265,7 @@ State:
   m_Speed: 1
   m_CycleOffset: 0
   m_Motions:
-  - {fileID: 7400004, guid: 6b7fe1b4f2244914e8f283bbd8b1edbb, type: 3}
+  - {fileID: 7400004, guid: 1c98e0734d3d3f945890073fa2d110ed, type: 3}
   m_ParentStateMachine: {fileID: 110753097}
   m_Position: {x: 504, y: 108, z: 0}
   m_IKOnFeet: 0
@@ -3324,7 +3396,7 @@ State:
   m_Speed: 1
   m_CycleOffset: 0
   m_Motions:
-  - {fileID: 7400002, guid: 6b7fe1b4f2244914e8f283bbd8b1edbb, type: 3}
+  - {fileID: 7400002, guid: 1c98e0734d3d3f945890073fa2d110ed, type: 3}
   m_ParentStateMachine: {fileID: 110753097}
   m_Position: {x: 504, y: -84, z: 0}
   m_IKOnFeet: 0
@@ -4073,9 +4145,9 @@ State:
   m_Speed: 1
   m_CycleOffset: 0
   m_Motions:
-  - {fileID: 7400000, guid: 6b7fe1b4f2244914e8f283bbd8b1edbb, type: 3}
+  - {fileID: 7400000, guid: 1c98e0734d3d3f945890073fa2d110ed, type: 3}
   m_ParentStateMachine: {fileID: 110753097}
-  m_Position: {x: 732, y: 12, z: 0}
+  m_Position: {x: 732, y: 0, z: 0}
   m_IKOnFeet: 0
   m_Mirror: 0
   m_Tag: 
@@ -4088,9 +4160,9 @@ State:
   m_Speed: 1
   m_CycleOffset: 0
   m_Motions:
-  - {fileID: 7400000, guid: 32aa0a0eb58ab1f42a77918abccd174f, type: 3}
+  - {fileID: 7400006, guid: 1c98e0734d3d3f945890073fa2d110ed, type: 3}
   m_ParentStateMachine: {fileID: 110753097}
-  m_Position: {x: 884, y: 164, z: 0}
+  m_Position: {x: 924, y: 72, z: 0}
   m_IKOnFeet: 0
   m_Mirror: 0
   m_Tag: 
@@ -4271,22 +4343,6 @@ StateMachine:
   - {x: 516, y: 144, z: 0}
   m_OrderedTransitions:
     data:
-      first: {fileID: 110279204}
-      second: []
-    data:
-      first: {fileID: 110278755}
-      second:
-      - {fileID: 110160325}
-      - {fileID: 110140155}
-    data:
-      first: {fileID: 110233382}
-      second:
-      - {fileID: 110109227}
-    data:
-      first: {fileID: 110202307}
-      second:
-      - {fileID: 110195483}
-    data:
       first: {fileID: 0}
       second: []
     data:
@@ -4308,17 +4364,25 @@ StateMachine:
       - {fileID: 110103612}
       - {fileID: 110164791}
     data:
-      first: {fileID: 0}
-      second: []
+      first: {fileID: 110279204}
+      second:
+      - {fileID: 110186578}
+      - {fileID: 110145881}
     data:
-      first: {fileID: 0}
-      second: []
+      first: {fileID: 110278755}
+      second:
+      - {fileID: 110160325}
+      - {fileID: 110140155}
+      - {fileID: 110117049}
+      - {fileID: 110170073}
     data:
-      first: {fileID: 0}
-      second: []
+      first: {fileID: 110233382}
+      second:
+      - {fileID: 110109227}
     data:
-      first: {fileID: 0}
-      second: []
+      first: {fileID: 110202307}
+      second:
+      - {fileID: 110195483}
     data:
       first: {fileID: 110209941}
       second:

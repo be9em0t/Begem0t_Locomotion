@@ -210,6 +210,10 @@ public class b9Mecanim04 : MonoBehaviour
             int animLoopNum = (int)animState.normalizedTime;
             float animPercent = Mathf.Round(((animState.normalizedTime - animLoopNum) * 100f)) / 100f;     //round to DP2
 
+//            print("idlevar");
+//            NextIdleVariant = Mathf.RoundToInt(UnityEngine.Random.Range(1, IdleAnims.Length));  //random select next transition
+//            anim.CrossFade(IdleAnims[NextIdleVariant], .1f, -1, 0f);    //Crossfade to
+//
             if (animPercent > .85f && canChangeState == true)       //crossfade after this percent
             {
                 canChangeState = false;                             //stop state change until next crossfade

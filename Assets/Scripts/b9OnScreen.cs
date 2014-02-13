@@ -70,6 +70,7 @@ public class b9OnScreen : MonoBehaviour {
         GUI.Label(new Rect(10, 360, 200, 120), "Sidestep: LStick + xbox B", mainStyle);
         GUI.Label(new Rect(10, 380, 200, 120), "Look L/R: LStick + xbox X", mainStyle);
         GUI.Label(new Rect(10, 400, 200, 120), "Alert : Left Bumper", mainStyle);
+		GUI.Label(new Rect(10, 420, 200, 120), "Stop : + xbox A", mainStyle);
 
         //GUI.Label(new Rect(10, 360, 200, 120), "Alert : Left Bumper", mainStyle);
         if (GUI.Button(new Rect(Screen.width - 110, 30, 30, 28), ".5x"))

@@ -3548,7 +3548,7 @@ State:
   m_ObjectHideFlags: 3
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
-  m_Name: LookL30 02 mid
+  m_Name: LookL_Loop
   m_Speed: 1
   m_CycleOffset: .5
   m_Motions:
@@ -3580,7 +3580,7 @@ State:
   m_ObjectHideFlags: 3
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
-  m_Name: SideStepL_End
+  m_Name: SideStepL-2-Idle
   m_Speed: 1
   m_CycleOffset: 0
   m_Motions:
@@ -3694,7 +3694,7 @@ State:
   m_ObjectHideFlags: 3
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
-  m_Name: SideStepL_Start
+  m_Name: Idle-2-SideStepL
   m_Speed: 1
   m_CycleOffset: 0
   m_Motions:
@@ -3745,7 +3745,7 @@ State:
   m_ObjectHideFlags: 3
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
-  m_Name: LookL30 02 start
+  m_Name: LookL_In
   m_Speed: 1
   m_CycleOffset: .5
   m_Motions:
@@ -3859,7 +3859,7 @@ State:
   m_ObjectHideFlags: 3
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
-  m_Name: Alert 03 Loop
+  m_Name: Alert_Loop
   m_Speed: 1
   m_CycleOffset: 0
   m_Motions:
@@ -3909,7 +3909,7 @@ State:
   m_ObjectHideFlags: 3
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
-  m_Name: Stand-2-Run 01 Ok
+  m_Name: Stand-2-Run
   m_Speed: 1
   m_CycleOffset: 0
   m_Motions:
@@ -3988,7 +3988,7 @@ State:
   m_ObjectHideFlags: 3
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
-  m_Name: LookR30 02 mid
+  m_Name: LookR_Loop
   m_Speed: 1
   m_CycleOffset: 0
   m_Motions:
@@ -4004,7 +4004,7 @@ State:
   m_ObjectHideFlags: 3
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
-  m_Name: LookR2L30 0
+  m_Name: LookR-2-LookL
   m_Speed: 1
   m_CycleOffset: .5
   m_Motions:
@@ -4020,7 +4020,7 @@ State:
   m_ObjectHideFlags: 3
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
-  m_Name: LookL30 02 end
+  m_Name: LookL_Out
   m_Speed: 1
   m_CycleOffset: .5
   m_Motions:
@@ -4036,7 +4036,7 @@ State:
   m_ObjectHideFlags: 3
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
-  m_Name: LookR30 02 start
+  m_Name: LookR_In
   m_Speed: 1
   m_CycleOffset: 0
   m_Motions:
@@ -4069,7 +4069,7 @@ State:
   m_ObjectHideFlags: 3
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
-  m_Name: SideStepR_End
+  m_Name: SideStepR-2-Idle
   m_Speed: 1
   m_CycleOffset: 0
   m_Motions:
@@ -4185,7 +4185,7 @@ State:
   m_ObjectHideFlags: 3
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
-  m_Name: Alert-2-Idle 03 End
+  m_Name: Alert-2-Idle
   m_Speed: 1
   m_CycleOffset: 0
   m_Motions:
@@ -4258,7 +4258,7 @@ State:
   - {fileID: 0}
   - {fileID: 0}
   m_ParentStateMachine: {fileID: 110776766}
-  m_Position: {x: 516, y: -48, z: 0}
+  m_Position: {x: 528, y: -48, z: 0}
   m_IKOnFeet: 0
   m_Mirror: 0
   m_Tag: 
@@ -4351,7 +4351,7 @@ State:
   m_ObjectHideFlags: 3
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
-  m_Name: LookR2L30
+  m_Name: LookL-2-LookR
   m_Speed: 1
   m_CycleOffset: 0
   m_Motions:
@@ -4367,7 +4367,7 @@ State:
   m_ObjectHideFlags: 3
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
-  m_Name: LookR30 02 end
+  m_Name: LookR_Out
   m_Speed: 1
   m_CycleOffset: 0
   m_Motions:
@@ -4434,7 +4434,7 @@ State:
   m_ObjectHideFlags: 3
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
-  m_Name: SideStepR_Start
+  m_Name: Idle-2-SideStepR
   m_Speed: 1
   m_CycleOffset: 0
   m_Motions:
@@ -4450,14 +4450,14 @@ State:
   m_ObjectHideFlags: 3
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
-  m_Name: Idle-2-Alert 03 Start
+  m_Name: Idle-2-Alert
   m_Speed: 1
   m_CycleOffset: 0
   m_Motions:
   - {fileID: 7400000, guid: 84b666439873a7b4996030307f080494, type: 3}
   - {fileID: 0}
   m_ParentStateMachine: {fileID: 110797586}
-  m_Position: {x: 624, y: -12, z: 0}
+  m_Position: {x: 624, y: -36, z: 0}
   m_IKOnFeet: 0
   m_Mirror: 0
   m_Tag: 
@@ -4482,7 +4482,7 @@ State:
   m_ObjectHideFlags: 3
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
-  m_Name: Sit_Idle_01
+  m_Name: Sit_Idle
   m_Speed: 1
   m_CycleOffset: 0
   m_Motions:
@@ -4576,7 +4576,7 @@ State:
   m_ObjectHideFlags: 3
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
-  m_Name: StepR_Continuous
+  m_Name: SideStepR_Loop
   m_Speed: 1
   m_CycleOffset: 0
   m_Motions:
@@ -4694,7 +4694,7 @@ StateMachine:
   - {x: 312, y: -96, z: 0}
   - {x: -192, y: 204, z: 0}
   - {x: 372, y: 48, z: 0}
-  - {x: 312, y: 204, z: 0}
+  - {x: 288, y: 204, z: 0}
   - {x: 516, y: 144, z: 0}
   m_OrderedTransitions:
     data:
@@ -4713,24 +4713,6 @@ StateMachine:
       - {fileID: 110144366}
       - {fileID: 110131546}
       - {fileID: 110194389}
-    data:
-      first: {fileID: 0}
-      second: []
-    data:
-      first: {fileID: 0}
-      second: []
-    data:
-      first: {fileID: 0}
-      second: []
-    data:
-      first: {fileID: 0}
-      second: []
-    data:
-      first: {fileID: 0}
-      second: []
-    data:
-      first: {fileID: 0}
-      second: []
     data:
       first: {fileID: 110246668}
       second:
@@ -4923,7 +4905,7 @@ StateMachine:
   m_ObjectHideFlags: 3
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
-  m_Name: LOOK
+  m_Name: LOOK_AROUND
   m_DefaultState: {fileID: 110250353}
   m_States:
   - {fileID: 110251551}
